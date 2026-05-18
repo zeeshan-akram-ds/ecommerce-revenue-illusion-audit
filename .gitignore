@@ -1,0 +1,28 @@
+# Environment & credentials
+.env
+*.env
+
+# Raw data
+data/raw/
+data/exports/
+data/processed/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Power BI temp files
+*.pbix.bak
+*.pbix
+
+# Jupyter
+.jupyter/
