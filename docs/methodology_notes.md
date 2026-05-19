@@ -20,3 +20,16 @@ SQL establishes ground truth metrics.
 Python must reproduce key metrics within a ±0.5% tolerance before downstream analysis begins.
 
 Power BI must match validated Python outputs before dashboard development proceeds.
+
+## Dataset Selection Rationale
+
+The initial dataset considered for this project was rejected because it contained only 101 rows and could not credibly support statistical validation, forecasting, operational risk analysis, or profitability segmentation.
+
+The selected DataCo Supply Chain dataset provides:
+- Order-line transactional granularity
+- Multi-year time coverage
+- Operational delivery metrics
+- Discount and profitability fields
+- Sufficient scale for statistical analysis and scenario modeling
+
+This better supports the project's central narrative around revenue illusion and operational profitability distortion.

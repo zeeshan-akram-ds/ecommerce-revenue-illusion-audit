@@ -22,3 +22,27 @@ The scope becomes broader and requires stronger analytical discipline to maintai
 
 **Impact on Analysis:**  
 All findings and deliverables must support the central narrative that revenue rankings can misrepresent true business health.
+
+---
+
+### DL-002 - Dataset Replacement Decision
+**Date:** 2026-05-19  
+**Phase:** Dataset Evaluation  
+
+**Decision:**  
+Reject the initial supply chain dataset and replace it with the DataCo Supply Chain dataset.
+
+**Alternatives Considered:**  
+- Continue with the original 101-row dataset
+- Search for external inventory-focused datasets
+
+**Rationale:**  
+The original dataset lacked sufficient scale and operational depth to support statistical validation, forecasting, profitability segmentation, or meaningful operational analysis.
+
+The DataCo dataset provides transactional granularity, multi-year temporal coverage, profitability metrics, and delivery performance fields aligned with the project's business narrative.
+
+**Risk / Tradeoff:**  
+The new dataset lacks direct inventory and supplier fields, requiring proxy-based engineering for inventory exposure and operational risk modeling.
+
+**Impact on Analysis:**  
+The project shifts toward operational profitability distortion, discount dependency, and fulfillment inefficiency while treating inventory analysis as modeled estimation rather than direct measurement.
