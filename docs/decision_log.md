@@ -49,7 +49,7 @@ The project shifts toward operational profitability distortion, discount depende
 
 ---
 
-### DL-003 — Project Analytical Positioning
+### DL-003 - Project Analytical Positioning
 **Date:** 2026-05-20  
 **Phase:** Business Problem Definition  
 
@@ -74,7 +74,7 @@ All future analysis must prioritize operational profitability distortion and ful
 
 ---
 
-### DL-004 — KPI Architecture Strategy
+### DL-004 - KPI Architecture Strategy
 **Date:** 2026-05-20  
 **Phase:** KPI Framework Design  
 
@@ -96,3 +96,28 @@ Some KPIs require threshold calibration and careful interpretation to avoid over
 
 **Impact on Analysis:**  
 Future SQL models, notebooks, dashboards, and executive reporting must align with the operational profitability audit framework defined here.
+
+---
+
+### DL-005 - Analytical Ownership & Reconciliation Strategy
+**Date:** 2026-05-20   
+**Phase:** Technical Architecture Planning  
+
+**Decision:**  
+Establish SQL as the exclusive ground truth layer, Python as the engineered analytics layer, and Power BI as the presentation layer.
+
+**Alternatives Considered:**  
+- Mixed KPI ownership across tools
+- Power BI-centric calculation logic
+- Python-first aggregation workflow
+
+**Rationale:**  
+The selected architecture maximizes analytical traceability, reconciliation reliability, and metric consistency across the project lifecycle.
+
+Separating transactional truth from engineered estimation reduces ambiguity and prevents downstream reporting inconsistencies.
+
+**Risk / Tradeoff:**  
+The workflow requires stricter reconciliation discipline and additional validation effort before each project phase transition.
+
+**Impact on Analysis:**  
+All downstream notebooks, dashboards, and executive reporting must reconcile against validated SQL outputs before findings are treated as reliable.

@@ -56,3 +56,56 @@ Operational risk findings are not triggered by single metrics in isolation.
 A product or category is treated as a meaningful operational risk only when multiple weak operational and profitability signals converge consistently at meaningful transaction volume.
 
 Single indicators are treated as warning flags rather than standalone conclusions.
+
+## Analytical Ownership Model
+
+### SQL Ownership - Ground Truth Layer
+SQL is the authoritative source for all raw transactional KPI calculations.
+
+This includes:
+- Revenue metrics
+- Profitability metrics
+- Discount metrics
+- Order volume metrics
+- Delivery and fulfillment metrics
+- Base aggregation logic
+
+All downstream analysis must reconcile against SQL outputs before progressing.
+
+---
+
+### Python Ownership - Engineered Analytics Layer
+Python is responsible for:
+- SQL validation and reconciliation
+- Engineered metrics
+- Proxy-based operational modeling
+- Statistical analysis
+- Risk scoring
+- Scenario simulation
+
+Engineered outputs are explicitly labeled as estimates where assumptions or proxy logic are involved.
+
+---
+
+### Power BI Ownership - Presentation Layer
+Power BI does not independently own analytical calculations.
+
+It consumes validated SQL/Python outputs for:
+- Executive reporting
+- KPI presentation
+- Visual storytelling
+- Decision-oriented dashboarding
+
+DAX calculations are limited to presentation-layer formatting and display logic.
+
+---
+
+## Reconciliation Standard
+
+Before Phase 2 begins:
+Python must reproduce SQL ground truth metrics within a ±0.5% tolerance threshold.
+
+Before Phase 3 begins:
+Power BI outputs must match validated Python outputs exactly.
+
+Any unresolved discrepancy is treated as a project blocker and logged before downstream analysis proceeds.
