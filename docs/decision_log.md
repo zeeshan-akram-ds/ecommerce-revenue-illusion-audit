@@ -1,3 +1,4 @@
+
 # Decision Log
 
 ---
@@ -121,3 +122,33 @@ The workflow requires stricter reconciliation discipline and additional validati
 
 **Impact on Analysis:**  
 All downstream notebooks, dashboards, and executive reporting must reconcile against validated SQL outputs before findings are treated as reliable.
+
+---
+
+### DL-006 - Data Modeling Strategy
+**Date:** 2026-05-20   
+**Phase:** Technical Architecture Planning  
+
+**Decision:**  
+Adopt a constrained four-table star schema centered around transactional order-line granularity.
+
+**Selected Tables:**  
+- fact_orders
+- dim_product
+- dim_region
+- dim_date
+
+**Alternatives Considered:**  
+- Single flat transactional table
+- Fully normalized warehouse-style schema
+
+**Rationale:**  
+The selected approach balances analytical professionalism, maintainability, and Power BI compatibility while avoiding unnecessary warehouse complexity.
+
+The schema is intentionally constrained to support the project's KPI framework and operational profitability narrative without overengineering.
+
+**Risk / Tradeoff:**  
+Some reusable categorical structures remain inside the fact table to preserve simplicity and reduce unnecessary ETL overhead.
+
+**Impact on Analysis:**  
+Future SQL modeling and dashboard logic must preserve transactional fidelity while supporting SKU-level profitability and operational risk analysis.

@@ -22,3 +22,8 @@
 - Finalized analytical ownership model across SQL, Python, and Power BI
 - Established SQL as the authoritative ground truth layer
 - Defined formal reconciliation checkpoints before downstream analysis phases
+
+## 2025-05-20
+- Finalized constrained star schema modeling strategy
+- Defined four-table analytical warehouse structure
+- Established transactional fidelity standards for fact_orders
