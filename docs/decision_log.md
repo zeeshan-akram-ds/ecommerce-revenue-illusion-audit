@@ -46,3 +46,28 @@ The new dataset lacks direct inventory and supplier fields, requiring proxy-base
 
 **Impact on Analysis:**  
 The project shifts toward operational profitability distortion, discount dependency, and fulfillment inefficiency while treating inventory analysis as modeled estimation rather than direct measurement.
+
+---
+
+### DL-003 — Project Analytical Positioning
+**Date:** 2026-05-20  
+**Phase:** Business Problem Definition  
+
+**Decision:**  
+Position the project as an operational profitability audit rather than a discount-focused or inventory-focused analysis.
+
+**Alternatives Considered:**  
+- Discount profitability audit
+- Inventory optimization analysis
+- Generic e-commerce KPI dashboard
+
+**Rationale:**  
+The selected positioning better aligns with the dataset's strengths in profitability, fulfillment performance, delivery risk, and transactional behavior.
+
+It also creates a stronger and more differentiated founder-facing narrative around operational inefficiency hidden beneath revenue growth.
+
+**Risk / Tradeoff:**  
+The project requires tighter narrative discipline to avoid becoming overly broad across operational and profitability themes.
+
+**Impact on Analysis:**  
+All future analysis must prioritize operational profitability distortion and fulfillment inefficiency rather than isolated discount or inventory metrics.

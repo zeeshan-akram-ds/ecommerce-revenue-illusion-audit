@@ -33,3 +33,18 @@ The selected DataCo Supply Chain dataset provides:
 - Sufficient scale for statistical analysis and scenario modeling
 
 This better supports the project's central narrative around revenue illusion and operational profitability distortion.
+
+## Evidence Standard
+
+Findings are categorized using three levels of analytical confidence:
+
+### Direct Evidence
+Supported directly by raw transactional fields existing in the dataset.
+
+### Engineered Estimate
+Derived using documented assumptions or proxy calculations.
+
+### Directional Observation
+Patterns that appear analytically meaningful but require caution due to data limitations or lack of causal evidence.
+
+This distinction is maintained throughout the project to avoid overstating analytical certainty.
