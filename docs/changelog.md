@@ -13,3 +13,7 @@
 - Defined formal business problem statement and core analytical questions
 - Established evidence classification standards for future findings
 
+## 2025-05-20
+- Designed formal KPI framework aligned with operational profitability audit narrative
+- Defined executive, operational, and risk-oriented KPI hierarchy
+- Established revenue-to-profit divergence as the primary narrative KPI

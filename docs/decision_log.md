@@ -71,3 +71,28 @@ The project requires tighter narrative discipline to avoid becoming overly broad
 
 **Impact on Analysis:**  
 All future analysis must prioritize operational profitability distortion and fulfillment inefficiency rather than isolated discount or inventory metrics.
+
+---
+
+### DL-004 — KPI Architecture Strategy
+**Date:** 2026-05-20  
+**Phase:** KPI Framework Design  
+
+**Decision:**  
+Structure project KPIs around profitability distortion, operational inefficiency, and revenue-to-profit divergence rather than traditional e-commerce reporting metrics.
+
+**Alternatives Considered:**  
+- Traditional revenue dashboard KPIs
+- Sales-growth-first reporting
+- Customer-centric KPI structure
+
+**Rationale:**  
+The selected KPI framework better supports the project's central narrative that revenue concentration can conceal operational and profitability weakness.
+
+The KPI structure prioritizes diagnostic and risk-oriented measures rather than descriptive commercial reporting.
+
+**Risk / Tradeoff:**  
+Some KPIs require threshold calibration and careful interpretation to avoid overstating operational risk.
+
+**Impact on Analysis:**  
+Future SQL models, notebooks, dashboards, and executive reporting must align with the operational profitability audit framework defined here.
