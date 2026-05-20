@@ -48,3 +48,11 @@ Derived using documented assumptions or proxy calculations.
 Patterns that appear analytically meaningful but require caution due to data limitations or lack of causal evidence.
 
 This distinction is maintained throughout the project to avoid overstating analytical certainty.
+
+## Operational Risk Interpretation Standard
+
+Operational risk findings are not triggered by single metrics in isolation.
+
+A product or category is treated as a meaningful operational risk only when multiple weak operational and profitability signals converge consistently at meaningful transaction volume.
+
+Single indicators are treated as warning flags rather than standalone conclusions.
