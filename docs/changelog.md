@@ -32,3 +32,8 @@
 - Began PostgreSQL analytical architecture setup
 - Defined raw and analytics schema strategy
 - Established SQL folder organization and SQL governance standards
+
+## 2025-05-21
+- Defined raw-layer import philosophy and validation standards
+- Documented PostgreSQL import and typing strategy
+- Created initial SQL schema setup script
