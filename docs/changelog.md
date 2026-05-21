@@ -27,3 +27,8 @@
 - Finalized constrained star schema modeling strategy
 - Defined four-table analytical warehouse structure
 - Established transactional fidelity standards for fact_orders
+
+## 2025-05-21
+- Began PostgreSQL analytical architecture setup
+- Defined raw and analytics schema strategy
+- Established SQL folder organization and SQL governance standards

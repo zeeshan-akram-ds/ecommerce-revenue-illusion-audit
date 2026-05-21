@@ -1,6 +1,8 @@
 # Environment & credentials
 .env
 *.env
+venv/
+
 
 # Raw data
 data/raw/
