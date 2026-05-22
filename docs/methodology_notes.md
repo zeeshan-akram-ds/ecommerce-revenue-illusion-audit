@@ -36,13 +36,10 @@ This better supports the project's central narrative around revenue illusion and
 
 ## Evidence Standard
 
-Findings are categorized using three levels of analytical confidence:
+Findings are categorized using two levels of analytical confidence:
 
 ### Direct Evidence
 Supported directly by raw transactional fields existing in the dataset.
-
-### Engineered Estimate
-Derived using documented assumptions or proxy calculations.
 
 ### Directional Observation
 Patterns that appear analytically meaningful but require caution due to data limitations or lack of causal evidence.
@@ -78,12 +75,9 @@ All downstream analysis must reconcile against SQL outputs before progressing.
 Python is responsible for:
 - SQL validation and reconciliation
 - Engineered metrics
-- Proxy-based operational modeling
 - Statistical analysis
 - Risk scoring
 - Scenario simulation
-
-Engineered outputs are explicitly labeled as estimates where assumptions or proxy logic are involved.
 
 ---
 

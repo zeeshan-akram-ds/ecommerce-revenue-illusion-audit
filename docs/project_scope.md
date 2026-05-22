@@ -39,6 +39,4 @@ This project does not cover:
 This project uses transactional and operational order data rather than direct warehouse or ERP inventory data.
 
 As a result:
-- Inventory-related metrics are modeled estimates
-- Supplier-specific conclusions are avoided
 - Operational risk analysis focuses primarily on fulfillment efficiency, discount dependency, and profitability distortion

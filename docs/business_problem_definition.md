@@ -37,7 +37,6 @@ The project aims to identify where revenue performance diverges from operational
 This project uses transactional order data rather than direct ERP or warehouse inventory systems.
 
 As a result:
-- Inventory-related metrics are modeled estimates
 - Supplier-level conclusions are avoided
 - Operational findings are based on transactional and fulfillment behavior patterns
 - Correlation is not treated as causation without explicit statistical support
