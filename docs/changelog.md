@@ -37,3 +37,8 @@
 - Defined raw-layer import philosophy and validation standards
 - Documented PostgreSQL import and typing strategy
 - Created initial SQL schema setup script
+
+## 2026-05-24
+- Completed raw layer ingestion, 180,519 rows loaded into raw.dataco_orders
+- Reconciliation confirmed: CSV source and PostgreSQL row counts match exactly
+- Resolved column mapping mismatches between DataCo CSV headers and DDL definitions
