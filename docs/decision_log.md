@@ -152,3 +152,63 @@ Some reusable categorical structures remain inside the fact table to preserve si
 
 **Impact on Analysis:**  
 Future SQL modeling and dashboard logic must preserve transactional fidelity while supporting SKU-level profitability and operational risk analysis.
+
+---
+
+### DL-007 - Retention of Extreme Negative Profit Ratio Records
+**Date:** 2026-05-24
+**Phase:** Raw Layer Quality Audit
+
+**Decision:**
+Retain all 6,301 records with profit ratios between −2.75 and −1.05 in all downstream analysis.
+
+**Rationale:**
+These records represent genuine cases of severe operational loss where costs exceeded revenue by up to 275%. Excluding them would artificially inflate profitability metrics and undermine the project's core audit of profit traps.
+
+**Impact on Analysis:**
+All downstream profitability aggregations include these records. Any summary statistics referencing average profit ratio must be interpreted with awareness of this tail distribution.
+
+---
+
+### DL-008 - Order Status Exclusion Boundaries
+**Date:** 2026-05-24
+**Phase:** Raw Layer Quality Audit
+
+**Decision:**
+Exclude SUSPECTED_FRAUD and CANCELED orders from all downstream profitability and operational KPI calculations.
+
+**Rationale:**
+These statuses represent either invalid transactions or incomplete operational lifecycles. Including them would distort revenue totals, profit aggregations, and delivery performance metrics.
+
+**Impact on Analysis:**
+All analytics schema builds and KPI queries apply a hard filter: `WHERE order_status NOT IN ('SUSPECTED_FRAUD', 'CANCELED')`. Row counts in all analytical outputs will reflect this exclusion explicitly.
+
+---
+
+### DL-009 - PENDING_PAYMENT Revenue Treatment
+**Date:** 2026-05-24
+**Phase:** Raw Layer Quality Audit
+
+**Decision:**
+Treat PENDING_PAYMENT orders as booked revenue and include them in downstream analysis.
+
+**Rationale:**
+The audit evaluates operational and profitability performance against the full commercial picture, not realized cash alone. Excluding pending orders would understate scale and distort fulfillment metrics for orders that are operationally active.
+
+**Risk:**
+If a material proportion of pending orders never convert, profit and revenue figures will be overstated. This is noted as a directional limitation in the final report.
+
+---
+
+### DL-010 - Low-Volume Product Exclusion from Delivery Risk Analysis
+**Date:** 2026-05-24
+**Phase:** Raw Layer Quality Audit
+
+**Decision:**
+Exclude the 46 products with fewer than 100 total orders from late delivery risk concentration analysis.
+
+**Rationale:**
+Fewer than 100 orders over three years produces statistically unreliable late delivery risk percentages. A single delayed shipment could generate a 10–20% risk rate for a low-volume product, producing misleading findings.
+
+**Impact on Analysis:**
+Late delivery risk rankings and concentration findings apply only to products with 100 or more orders. Low-volume products remain in profitability analysis where order count does not affect metric reliability in the same way.
