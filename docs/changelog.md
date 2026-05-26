@@ -60,3 +60,9 @@
 - Financial reconciliation confirmed within tolerance against raw layer
 - Five SQL ground truth benchmarks established for Python validation
 - Critical finding: all 118 products carry at least one loss-making order
+
+## 2026-05-26
+- Completed KPI query layer across profitability, operational, and consolidated ground truth outputs
+- Established revenue-to-profit rank divergence, discount dependency, and delivery risk concentration at SKU level
+- Confirmed First Class shipping at 100% late delivery risk, systemic SLA failure documented
+- Ground truth master export produced and locked for Python validation
