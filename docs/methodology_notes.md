@@ -103,3 +103,16 @@ Before Phase 3 begins:
 Power BI outputs must match validated Python outputs exactly.
 
 Any unresolved discrepancy is treated as a project blocker and logged before downstream analysis proceeds.
+
+## SQL Ground Truth Benchmarks
+*Validated 2026-05-26. Python must reproduce all five within ±0.5% before analysis begins.*
+
+| Metric | SQL Value |
+|---|---|
+| Total unique products | 118 |
+| Total revenue | $35,214,428.98 |
+| Average profit ratio | 0.1208 |
+| Products with at least one loss-making order | 118 of 118 |
+| Average late delivery risk rate | 0.5729 |
+
+Financial reconciliation confirmed within tolerance (sales difference: $0.67, profit difference: $0.004).
