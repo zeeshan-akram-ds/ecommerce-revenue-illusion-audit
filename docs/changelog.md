@@ -53,3 +53,10 @@
 - dim_product: 118 unique SKUs, clean 1:1 product_card_id integrity confirmed
 - dim_region: 167 unique geographic routing combinations verified
 - dim_date: 1,127 continuous transaction dates confirmed, zero blackout periods
+
+## 2026-05-26
+- Completed analytics star schema build across all four tables
+- fact_orders: 172,765 rows loaded after hard exclusion of 7,754 invalid orders
+- Financial reconciliation confirmed within tolerance against raw layer
+- Five SQL ground truth benchmarks established for Python validation
+- Critical finding: all 118 products carry at least one loss-making order
