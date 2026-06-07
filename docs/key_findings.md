@@ -13,3 +13,8 @@ The top four revenue-generating products are genuinely the most profitable in ab
 
 **F-004 - Extreme Volume Concentration**  
 Transaction volume is severely consolidated, making catalog-wide performance metrics misleading. Just 9 products (7.6% of the catalog) generate at least 10,000 orders each, accounting for the vast majority of the 180,519 total transactions. Meanwhile, 39% of the catalog (46 products) generated fewer than 100 orders over a three-year span.
+
+**F-005 - Lifecycle Net-Negative Products**
+SOLE E35 Elliptical (−$965) and SOLE E25 Elliptical (−$169) are net-negative in absolute profit across their entire three-year transaction history.
+The business loses money on these SKUs in aggregate, not just on isolated orders.
+The most margin-efficient products (Polar FT4 at 19.86%, Bowflex SelectTech 1090 at 19.85%) lack sufficient volume to offset this drag.
