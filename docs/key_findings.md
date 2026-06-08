@@ -23,3 +23,8 @@ The most margin-efficient products (Polar FT4 at 19.86%, Bowflex SelectTech 1090
 SOLE E35 Elliptical ranks 36th in revenue and dead last (118th) in profit at −3.2% net margin.
 GoPro HERO3+ and Garmin Forerunner 910XT sit in the bottom 10% of profit despite mid-catalog revenue positions.
 10 products identified as confirmed Revenue Traps, commercially visible, operationally destructive.
+
+**F-007 - Discounting Is a Structural Cost, Not a Tactic**
+93–97% of orders across virtually all 118 products require a discount to convert.
+Discounting is not a promotional lever, it is the default operating model.
+No meaningful non-discounted control group exists, making discount elasticity analysis impossible from this dataset alone.
