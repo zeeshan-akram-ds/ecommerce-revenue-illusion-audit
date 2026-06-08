@@ -18,3 +18,8 @@ Transaction volume is severely consolidated, making catalog-wide performance met
 SOLE E35 Elliptical (−$965) and SOLE E25 Elliptical (−$169) are net-negative in absolute profit across their entire three-year transaction history.
 The business loses money on these SKUs in aggregate, not just on isolated orders.
 The most margin-efficient products (Polar FT4 at 19.86%, Bowflex SelectTech 1090 at 19.85%) lack sufficient volume to offset this drag.
+
+**F-006 - Revenue Trap Products Identified**
+SOLE E35 Elliptical ranks 36th in revenue and dead last (118th) in profit at −3.2% net margin.
+GoPro HERO3+ and Garmin Forerunner 910XT sit in the bottom 10% of profit despite mid-catalog revenue positions.
+10 products identified as confirmed Revenue Traps, commercially visible, operationally destructive.
