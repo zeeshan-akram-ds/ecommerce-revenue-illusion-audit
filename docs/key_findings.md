@@ -49,3 +49,10 @@ The discount dependency and delivery failures are structural realities, not isol
 The highest-revenue products cluster directly around the median crosshairs, neither margin leaders nor delivery risk outliers.
 The business has not scaled its best performers. It has scaled its most average ones.
 28 products sit in the Cut Candidates quadrant, combining below-median margins with above-median delivery failure.
+
+**F-012 - 28 Zombie SKUs Consuming Bandwidth for 2.2% of Revenue**
+The Cut Candidates quadrant contains 28 products generating only $763K of $35.2M total revenue, 2.2% of the catalog's top line.
+Aggregate margin: 8.82%. Average delivery risk: >58%.
+These products are not commercial threats, they are operational dead weight.
+Eliminating them removes nearly a quarter of the catalog while protecting 97.8% of total revenue.
+Affected brands include Under Armour (x2), ENO, Bridgestone, and Adidas.
