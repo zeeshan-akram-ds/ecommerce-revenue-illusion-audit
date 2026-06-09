@@ -38,3 +38,9 @@ These are not isolated underperformers, they represent the worst-case convergenc
 SOLE E25 (0.81), GoPro HERO3+ (0.74), and SOLE E35 (0.71) are simultaneously the worst margin performers and the most volatile SKUs.
 These products do not just lose money, their losses are erratic and unforecastable.
 High-revenue products stabilize near 0.46 volatility but are permanently locked into ~11% margin and 94% discount dependency.
+
+**F-010 - Operational Failures Are Chronic, Not Cyclical**
+Revenue and profit were flatlined across nearly three years with no growth trajectory.
+Late delivery risk and margin volatility remained consistently erratic from month one to the final month, no operational improvement over 36 months.
+The sharp drop at the dataset's end indicates a demand collapse or supply chain break, not a temporary fluctuation.
+The discount dependency and delivery failures are structural realities, not isolated incidents.
