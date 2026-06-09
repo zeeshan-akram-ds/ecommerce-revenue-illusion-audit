@@ -212,3 +212,35 @@ Fewer than 100 orders over three years produces statistically unreliable late de
 
 **Impact on Analysis:**
 Late delivery risk rankings and concentration findings apply only to products with 100 or more orders. Low-volume products remain in profitability analysis where order count does not affect metric reliability in the same way.
+
+---
+
+---
+
+### DL-011 - SKU Quadrant Classification Thresholds and Axis Definition
+**Date:** 2026-06-09
+**Phase:** Analytical Modeling
+
+**Decision:**
+Use catalog medians of `net_profit_pct` and `late_delivery_risk_rate` as the two classification axes. Revenue scale is represented as bubble size on the scatter plot rather than as a dedicated axis.
+
+**Alternatives Considered:**
+- Mean averages: rejected due to extreme right-skew distorting the central tendency
+- Absolute fixed thresholds (e.g., 10% margin floor, 50% delivery risk ceiling): rejected as arbitrary external standards not grounded in this catalog's actual performance distribution
+- Revenue vs. profit margin as axes: rejected because it cannot surface operational delivery failure as a classification dimension
+
+**Quadrant Definitions:**
+| Quadrant | Margin | Delivery Risk |
+|---|---|---|
+| Cash Generators | Above median | Below median |
+| Operational Risks | Above median | Above median |
+| Underperformers | Below median | Below median |
+| Cut Candidates | Below median | Above median |
+
+Revenue Traps are not a standalone quadrant. They are identified through rank divergence analysis (Notebook 01) and surfaced visually in this model via bubble size, large bubbles in the Cut Candidates quadrant represent the convergence of high revenue scale and poor operational health.
+
+**Rationale:**
+Medians isolate the true middle of the catalog's performance, preventing extreme high-volume outliers from shifting classification boundaries. Separating revenue scale from the axes keeps the model analytically clean while still communicating scale through the bubble dimension.
+
+**Impact on Analysis:**
+All quadrant assignments evaluate margin efficiency and operational delivery health simultaneously. Revenue scale remains visible but does not distort classification logic.
