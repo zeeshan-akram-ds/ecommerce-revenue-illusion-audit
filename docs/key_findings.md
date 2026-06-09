@@ -44,3 +44,8 @@ Revenue and profit were flatlined across nearly three years with no growth traje
 Late delivery risk and margin volatility remained consistently erratic from month one to the final month, no operational improvement over 36 months.
 The sharp drop at the dataset's end indicates a demand collapse or supply chain break, not a temporary fluctuation.
 The discount dependency and delivery failures are structural realities, not isolated incidents.
+
+**F-011 - Scale Has Been Deployed Into Mediocrity**
+The highest-revenue products cluster directly around the median crosshairs, neither margin leaders nor delivery risk outliers.
+The business has not scaled its best performers. It has scaled its most average ones.
+28 products sit in the Cut Candidates quadrant, combining below-median margins with above-median delivery failure.
