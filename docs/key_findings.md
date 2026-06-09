@@ -33,3 +33,8 @@ No meaningful non-discounted control group exists, making discount elasticity an
 Five products fail simultaneously on all three operational dimensions: late delivery risk >60%, discount dependency >94%, and net margin <10%.
 Includes recognized brands: Under Armour (x2) and ENO Atlas.
 These are not isolated underperformers, they represent the worst-case convergence of fulfillment failure, promotional dependency, and margin destruction in a single SKU.
+
+**F-009 - Revenue Traps Are Also the Most Unpredictable**
+SOLE E25 (0.81), GoPro HERO3+ (0.74), and SOLE E35 (0.71) are simultaneously the worst margin performers and the most volatile SKUs.
+These products do not just lose money, their losses are erratic and unforecastable.
+High-revenue products stabilize near 0.46 volatility but are permanently locked into ~11% margin and 94% discount dependency.
