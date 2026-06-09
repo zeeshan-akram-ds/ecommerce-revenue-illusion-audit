@@ -28,3 +28,8 @@ GoPro HERO3+ and Garmin Forerunner 910XT sit in the bottom 10% of profit despite
 93–97% of orders across virtually all 118 products require a discount to convert.
 Discounting is not a promotional lever, it is the default operating model.
 No meaningful non-discounted control group exists, making discount elasticity analysis impossible from this dataset alone.
+
+**F-008 - Five Compounded Risk Products Identified**
+Five products fail simultaneously on all three operational dimensions: late delivery risk >60%, discount dependency >94%, and net margin <10%.
+Includes recognized brands: Under Armour (x2) and ENO Atlas.
+These are not isolated underperformers, they represent the worst-case convergence of fulfillment failure, promotional dependency, and margin destruction in a single SKU.
