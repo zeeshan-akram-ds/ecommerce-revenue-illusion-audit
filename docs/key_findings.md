@@ -56,3 +56,9 @@ Aggregate margin: 8.82%. Average delivery risk: >58%.
 These products are not commercial threats, they are operational dead weight.
 Eliminating them removes nearly a quarter of the catalog while protecting 97.8% of total revenue.
 Affected brands include Under Armour (x2), ENO, Bridgestone, and Adidas.
+
+**F-013 - 6.8% of Products Generate 80% of All Profit**
+Just 8 products out of 118 drive 80% of total profit, the catalog exceeds Pareto concentration severely.
+The remaining 110 products compete for the final 20% of margin while consuming the majority of operational bandwidth.
+Critical fragility: if any of these 8 core SKUs faces supplier disruption or logistics failure, the business's profit base collapses entirely.
+This is the single most important structural finding of the audit.
