@@ -62,3 +62,9 @@ Just 8 products out of 118 drive 80% of total profit, the catalog exceeds Pareto
 The remaining 110 products compete for the final 20% of margin while consuming the majority of operational bandwidth.
 Critical fragility: if any of these 8 core SKUs faces supplier disruption or logistics failure, the business's profit base collapses entirely.
 This is the single most important structural finding of the audit.
+
+**F-014 - Composite Risk Scoring Confirms the Audit's Worst Offenders**
+SOLE E25 (77.9) and SOLE E35 (66.7) rank as the two most toxic assets despite sitting in different quadrants.
+Top 10 risk products are dominated by recognized premium brands: Nike, Under Armour, Garmin, Bushnell, Bridgestone.
+The business is subsidizing brand names through discounts while absorbing chronic operational failure costs on those exact SKUs.
+Single-dimension catastrophic failure (SOLE E35's margin) is equally dangerous as multi-dimension consistent failure (Bushnell's delivery risk).

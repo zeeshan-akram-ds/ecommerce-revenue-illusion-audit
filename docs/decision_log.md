@@ -244,3 +244,25 @@ Medians isolate the true middle of the catalog's performance, preventing extreme
 
 **Impact on Analysis:**
 All quadrant assignments evaluate margin efficiency and operational delivery health simultaneously. Revenue scale remains visible but does not distort classification logic.
+
+---
+
+### DL-012 - Composite Risk Scoring Methodology
+**Date:** 2026-06-12
+**Phase:** Analytical Modeling
+
+**Decision:**
+Build composite risk score using three equally-weighted normalized vectors: late delivery risk rate, discount dependency rate, and rank divergence (inverted).
+
+**Normalization Approach:**
+MinMaxScaler applied independently to each vector. Rank divergence is inverted so that negative divergence (Revenue Traps) scores highest risk. Low-volume nulls in delivery risk are imputed with the catalog median prior to scaling to prevent distortion.
+
+**Alternatives Considered:**
+- Weighted scoring with higher emphasis on margin, rejected because it would over-penalize margin failures and under-penalize operational failures
+- Raw values without normalization, rejected because the three metrics operate on incompatible scales
+
+**Rationale:**
+Equal weighting treats delivery failure, promotional dependency, and revenue-profit misalignment as equally damaging business risks. This reflects the project's multi-dimensional audit philosophy rather than a single-metric ranking.
+
+**Impact on Analysis:**
+The composite score is the primary output used for the executive priority list. Products in the top 10 are the first action targets regardless of their quadrant classification.
