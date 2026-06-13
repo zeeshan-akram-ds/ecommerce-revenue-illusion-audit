@@ -266,3 +266,21 @@ Equal weighting treats delivery failure, promotional dependency, and revenue-pro
 
 **Impact on Analysis:**
 The composite score is the primary output used for the executive priority list. Products in the top 10 are the first action targets regardless of their quadrant classification.
+
+---
+
+### DL-013 - Statistical Methodology and Alpha Threshold
+**Date:** 2026-06-09
+**Phase:** Statistical Validation
+
+**Decision:**
+Adopt an alpha threshold of 0.05 for all hypothesis testing. Default to non-parametric tests (Spearman, Kruskal-Wallis, Mann-Whitney U, IQR for outliers) assuming data non-normality based on Phase 1 EDA findings.
+
+**Alternatives Considered:**
+- Parametric tests (Pearson, ANOVA): rejected preemptively due to the severe right-skew and heavy tails observed in the catalog's revenue and profit distributions
+
+**Rationale:**
+Applying parametric tests to highly skewed operational data produces false positives. Non-parametric rank-based tests evaluate the underlying order and relationships without assuming a bell curve, making them mathematically defensible for e-commerce SKU data.
+
+**Impact on Analysis:**
+All hypothesis test results are classified into three evidence tiers: Confirmed Evidence (p < 0.05), Directional Signal (0.05 ≤ p < 0.10), or Observation (p ≥ 0.10 or untestable). Every finding cited in the executive report must reference one of these three classifications.
