@@ -80,3 +80,10 @@ This statistically validates the composite scoring model and the multi-dimension
 Kruskal-Wallis confirms quadrant separation is not arbitrary: margin (p = 4.43e-19), delivery risk (p = 5.47e-19).
 Mann-Whitney pairwise confirms Cash Generators and Cut Candidates are from completely different distributions (p = 2.08e-10).
 Every product elimination recommendation made from this model is acting on mathematically confirmed failure, not subjective judgment.
+
+**F-017 - Statistical Outlier Confirmation of Toxic and Elite SKUs**
+IQR analysis confirms SOLE E35, SOLE E25, and GoPro HERO3+ as statistically anomalous margin failures, below the 2.80% normal lower bound.
+Their failure is systemic, not cyclical or random.
+20 products exceed the upper profit bound of $7,970, but only the top 8 generate between $296K and $731K each, operating in a completely separate statistical stratosphere from the remaining catalog.
+The business's profit structure is held together by 8 statistical anomalies at the top while 3 confirmed anomalies actively destroy value at the bottom.
+
