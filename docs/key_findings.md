@@ -68,3 +68,10 @@ SOLE E25 (77.9) and SOLE E35 (66.7) rank as the two most toxic assets despite si
 Top 10 risk products are dominated by recognized premium brands: Nike, Under Armour, Garmin, Bushnell, Bridgestone.
 The business is subsidizing brand names through discounts while absorbing chronic operational failure costs on those exact SKUs.
 Single-dimension catastrophic failure (SOLE E35's margin) is equally dangerous as multi-dimension consistent failure (Bushnell's delivery risk).
+
+**F-015 - Operational Metrics Only Predict Margin in Combination**
+Discount dependency alone: no significant relationship with margin (r = −0.032, p = 0.734).
+Delivery risk alone: no significant relationship with margin (r = −0.064, p = 0.491).
+Composite risk score: significant negative relationship with margin (r = −0.570, p < 0.001).
+No single operational failure predicts profit destruction. Only their convergence does.
+This statistically validates the composite scoring model and the multi-dimensional audit approach.
