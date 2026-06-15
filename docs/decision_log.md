@@ -270,7 +270,7 @@ The composite score is the primary output used for the executive priority list. 
 ---
 
 ### DL-013 - Statistical Methodology and Alpha Threshold
-**Date:** 2026-06-09
+**Date:** 2026-06-12
 **Phase:** Statistical Validation
 
 **Decision:**
@@ -284,3 +284,31 @@ Applying parametric tests to highly skewed operational data produces false posit
 
 **Impact on Analysis:**
 All hypothesis test results are classified into three evidence tiers: Confirmed Evidence (p < 0.05), Directional Signal (0.05 ≤ p < 0.10), or Observation (p ≥ 0.10 or untestable). Every finding cited in the executive report must reference one of these three classifications.
+
+---
+
+---
+
+### DL-014 - Scenario Simulation Methodology and Assumptions
+**Date:** 2026-06-15 <br>
+**Phase:** Scenario Simulation
+
+**Decision:**
+Build three distinct scenarios representing different operational risk materializations rather than a single sensitivity analysis.
+
+**Scenario Definitions:**
+- **Scenario A - Zombie SKU Elimination:** Remove all 28 Cut Candidates from the catalog. Measures the revenue cost versus operational benefit of aggressive catalog pruning.
+- **Scenario B - Core SKU Disruption:** Apply 20% margin compression to the 8 statistically confirmed profit outliers. Quantifies the financial consequence of the structural fragility identified in F-013.
+- **Scenario C - Compounded Operational Stress:** Apply 10% increase in discount dependency and 15% increase in late delivery risk across the full catalog. Projects the directional margin impact of continued operational deterioration consistent with F-010.
+
+**Assumptions:**
+- Scenario A assumes no demand cannibalization, eliminated SKUs do not redirect purchasing to retained products.
+- Scenario B treats 20% margin compression as a realistic supplier or logistics cost shock, not an extreme tail event.
+- Scenario C outputs are directional estimates only, not precise forecasts. The composite risk-to-margin relationship (r = −0.57) provides the directional basis but does not support point-estimate precision.
+
+**Alternatives Considered:**
+- Single sensitivity analysis varying one parameter: rejected because it cannot capture the compounded operational failure pattern confirmed across F-007, F-010, and F-013.
+- Monte Carlo simulation: rejected as beyond the analytical scope and unnecessary given the audit's founder-facing decision framing.
+
+**Impact on Analysis:**
+Scenario C findings must be presented with explicit directional labeling in all deliverables. Scenarios A and B are arithmetically precise and can be cited as confirmed financial projections.
