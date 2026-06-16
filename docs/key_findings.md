@@ -91,3 +91,9 @@ The business's profit structure is held together by 8 statistical anomalies at t
 Scenario A confirms: removing all 28 Cut Candidates retains 97.83% of revenue and 98.23% of profit.
 Margin improves marginally (10.81% -> 10.85%) but the real gain is operational, 25% of supply chain bandwidth freed immediately.
 This is the lowest-risk, highest-impact action available to the business.
+
+**F-019 - 20% Disruption to 8 SKUs Destroys 16.9% of Total Company Profit**
+Scenario B confirms: a localized cost shock to the 8 core SKUs wipes out $643,289 in net profit.
+Catalog margin drops from 10.81% to 8.98%, a 1.83 point collapse.
+110 remaining products cannot generate enough aggregate margin to absorb the loss.
+The catalog is wide. The safety net is 8 products deep.
