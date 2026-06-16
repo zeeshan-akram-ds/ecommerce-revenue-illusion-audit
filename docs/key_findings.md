@@ -97,3 +97,10 @@ Scenario B confirms: a localized cost shock to the 8 core SKUs wipes out $643,28
 Catalog margin drops from 10.81% to 8.98%, a 1.83 point collapse.
 110 remaining products cannot generate enough aggregate margin to absorb the loss.
 The catalog is wide. The safety net is 8 products deep.
+
+**F-020 - Compounded Operational Stress Directionally Destroys $180K in Profit**
+Scenario C projects a 0.51 point margin drop and $180,624 profit erosion under 10% discount increase and 15% delivery risk increase.
+Margin decay rate of 4.75% derived from the validated composite risk correlation (r = −0.57).
+This is a conservative directional estimate. Non-linear compounding effects may produce worse outcomes.
+Chronic operational stagnation confirmed in F-010 makes this scenario a continuation of observed trajectory, not a hypothetical.
+
