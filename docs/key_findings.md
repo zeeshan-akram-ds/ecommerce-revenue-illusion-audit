@@ -87,3 +87,7 @@ Their failure is systemic, not cyclical or random.
 20 products exceed the upper profit bound of $7,970, but only the top 8 generate between $296K and $731K each, operating in a completely separate statistical stratosphere from the remaining catalog.
 The business's profit structure is held together by 8 statistical anomalies at the top while 3 confirmed anomalies actively destroy value at the bottom.
 
+**F-018 - Eliminating 28 Zombie SKUs Costs Less Than 2% of Total Profit**
+Scenario A confirms: removing all 28 Cut Candidates retains 97.83% of revenue and 98.23% of profit.
+Margin improves marginally (10.81% -> 10.85%) but the real gain is operational, 25% of supply chain bandwidth freed immediately.
+This is the lowest-risk, highest-impact action available to the business.
