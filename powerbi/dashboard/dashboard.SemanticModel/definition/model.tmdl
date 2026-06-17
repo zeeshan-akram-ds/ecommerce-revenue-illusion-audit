@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["ProductKPIs","QuadrantModel","ScenarioResults","CoreProfitDrivers","RevenueTrapDetail","EvidenceSummary","DimProduct","DimDate","DimRegion","FactOrders","_Measures"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.139.2054.0 (24.12)+334ca1c95b576cc53924655643b0d36f21caac55
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table ProductKPIs
+ref table QuadrantModel
+ref table ScenarioResults
+ref table CoreProfitDrivers
+ref table RevenueTrapDetail
+ref table EvidenceSummary
+ref table DimProduct
+ref table DimDate
+ref table DateTableTemplate_ddd8f3ba-188e-4812-b1e2-36a4ac3a2dd6
+ref table LocalDateTable_87ec2cd7-fcfc-4bc0-9f31-f99245a2d5fa
+ref table DimRegion
+ref table FactOrders
+ref table _Measures
+
+ref cultureInfo en-US
+

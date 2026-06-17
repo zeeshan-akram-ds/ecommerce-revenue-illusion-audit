@@ -1,0 +1,49 @@
+table DimRegion
+	lineageTag: 3a4d5dce-8b21-487b-bd8a-f900dfcbd4d5
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 912f9f6f-3b83-42af-88cd-3641ae01dab6
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_region
+		dataType: string
+		lineageTag: ffd602d8-fc19-4476-ac61-7bc3b8bbc0de
+		summarizeBy: none
+		sourceColumn: order_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_country
+		dataType: string
+		lineageTag: f1fdddf7-d931-47b5-801b-240c5d07652e
+		summarizeBy: none
+		sourceColumn: order_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column market
+		dataType: string
+		lineageTag: 67f0e398-8f0d-4b7f-b03a-d1f04d32239e
+		summarizeBy: none
+		sourceColumn: market
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimRegion = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "revenue_rank_reality"),
+				    analytics_dim_region = Source{[Schema="analytics",Item="dim_region"]}[Data]
+				in
+				    analytics_dim_region
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

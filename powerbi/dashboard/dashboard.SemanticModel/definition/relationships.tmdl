@@ -1,0 +1,39 @@
+relationship b1e32d84-d566-4817-900a-d590acb0a909
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.date_id
+	toColumn: LocalDateTable_87ec2cd7-fcfc-4bc0-9f31-f99245a2d5fa.Date
+
+relationship AutoDetected_e4f4e7aa-f10e-45a0-84b7-9b36d288a4f4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: DimProduct.product_card_id
+	toColumn: ProductKPIs.product_card_id
+
+relationship AutoDetected_6924447b-597b-4968-8025-81277fd24584
+	fromColumn: FactOrders.region_id
+	toColumn: DimRegion.region_id
+
+relationship bc5f3b10-95b1-021e-14c4-51f7442731fb
+	isActive: false
+	fromColumn: FactOrders.product_card_id
+	toColumn: DimProduct.product_card_id
+
+relationship 04dcc990-3035-3a1d-7c7d-96248578fc40
+	fromColumn: FactOrders.date_id
+	toColumn: DimDate.date_id
+
+relationship 49123acc-eddf-13c6-fadc-822a2b85a7cc
+	crossFilteringBehavior: bothDirections
+	fromColumn: QuadrantModel.product_card_id
+	toColumn: DimProduct.product_card_id
+
+relationship f9e66ac4-5bf7-b12b-47e3-5fe329489eff
+	crossFilteringBehavior: bothDirections
+	fromColumn: CoreProfitDrivers.product_card_id
+	toColumn: DimProduct.product_card_id
+
+relationship d1d6751c-c25c-d2ec-13b9-5e870bc17817
+	crossFilteringBehavior: bothDirections
+	fromColumn: RevenueTrapDetail.product_card_id
+	toColumn: DimProduct.product_card_id
+

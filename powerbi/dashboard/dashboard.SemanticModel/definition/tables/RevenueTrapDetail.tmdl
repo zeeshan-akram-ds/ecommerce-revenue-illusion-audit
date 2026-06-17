@@ -1,0 +1,235 @@
+table RevenueTrapDetail
+	lineageTag: 4ccec506-9280-46e6-aad6-5eff826de98c
+
+	column product_card_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 25571124-762b-4fa6-84d0-7bfc751e207b
+		summarizeBy: none
+		sourceColumn: product_card_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: cb5176f4-93a2-49f8-aaf5-ae7ae464cc7c
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 408fbdb3-4030-45ac-b61f-791a2e019a15
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: 0666f57e-b180-43ce-a174-a124c349c330
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_profit
+		dataType: double
+		lineageTag: 39a3c7cc-7ec3-468a-a66b-b49ed2ed2b1c
+		summarizeBy: sum
+		sourceColumn: total_profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_profit_pct
+		dataType: double
+		lineageTag: d3ea67f4-c615-4b23-9668-29728ec42649
+		summarizeBy: sum
+		sourceColumn: net_profit_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 939366f5-47b7-4ba2-8e4d-9e266c372a21
+		summarizeBy: sum
+		sourceColumn: revenue_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column profit_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f10fa12-18a5-4bea-b6a4-844d0063d083
+		summarizeBy: sum
+		sourceColumn: profit_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank_divergence
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b70e436-6c21-4208-9284-6f9fa63bef01
+		summarizeBy: sum
+		sourceColumn: rank_divergence
+
+		annotation SummarizationSetBy = Automatic
+
+	column negative_profit_order_pct
+		dataType: double
+		lineageTag: af178c92-4ceb-4ae9-aad5-c82c28a608d1
+		summarizeBy: sum
+		sourceColumn: negative_profit_order_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_dependency_rate
+		dataType: double
+		lineageTag: 583226b2-a7d5-477a-8230-a0d4b24bdedb
+		summarizeBy: sum
+		sourceColumn: discount_dependency_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_orders
+		dataType: int64
+		formatString: 0
+		lineageTag: 8962ae8f-192a-4927-baee-a9ce9cac5831
+		summarizeBy: sum
+		sourceColumn: total_orders
+
+		annotation SummarizationSetBy = Automatic
+
+	column units_sold_per_day
+		dataType: double
+		lineageTag: 163d5bc0-bde2-4f65-8bd0-f080a272f6a0
+		summarizeBy: sum
+		sourceColumn: units_sold_per_day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column late_delivery_risk_rate
+		dataType: double
+		lineageTag: e28691b7-efdf-4f15-ad4d-1a64b249c48a
+		summarizeBy: sum
+		sourceColumn: late_delivery_risk_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column avg_shipping_delay_days
+		dataType: double
+		lineageTag: a8a80eb1-ab4a-4dbe-a7b5-36726beb668b
+		summarizeBy: sum
+		sourceColumn: avg_shipping_delay_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column profit_ratio_volatility
+		dataType: double
+		lineageTag: d745aaeb-7a07-48df-ac89-6d1d49d8bf83
+		summarizeBy: sum
+		sourceColumn: profit_ratio_volatility
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column delivery_risk_rank
+		dataType: int64
+		formatString: 0
+		lineageTag: e7d14049-ab60-4553-975e-4dd65e51149f
+		summarizeBy: sum
+		sourceColumn: delivery_risk_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column quadrant
+		dataType: string
+		lineageTag: 29a0c184-8ee3-445f-b480-cfce8e934a3e
+		summarizeBy: none
+		sourceColumn: quadrant
+
+		annotation SummarizationSetBy = Automatic
+
+	column imputed_risk
+		dataType: double
+		lineageTag: 0ecfaf41-3ab9-40f9-a1f4-7238f87f4469
+		summarizeBy: sum
+		sourceColumn: imputed_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column norm_delivery_risk
+		dataType: double
+		lineageTag: 99c59d74-97fc-4165-ab5d-e58131991a66
+		summarizeBy: sum
+		sourceColumn: norm_delivery_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column norm_discount_risk
+		dataType: double
+		lineageTag: c8dac6c8-7c3c-4e13-aa10-0ac2960d0fc9
+		summarizeBy: sum
+		sourceColumn: norm_discount_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column norm_divergence_risk
+		dataType: double
+		lineageTag: 38a8af5d-e0f2-44d3-85d2-6ab220b6fae1
+		summarizeBy: sum
+		sourceColumn: norm_divergence_risk
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column composite_risk_score
+		dataType: double
+		lineageTag: d0e09c97-4e82-4f9e-ab90-84147b9c4f5e
+		summarizeBy: sum
+		sourceColumn: composite_risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition RevenueTrapDetail = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\data-analysis-projects\ecommerce-revenue-illusion-audit\data\processed\revenue_trap_detail.csv"),[Delimiter=",", Columns=23, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_card_id", Int64.Type}, {"product_name", type text}, {"category_name", type text}, {"total_revenue", type number}, {"total_profit", type number}, {"net_profit_pct", type number}, {"revenue_rank", Int64.Type}, {"profit_rank", Int64.Type}, {"rank_divergence", Int64.Type}, {"negative_profit_order_pct", type number}, {"discount_dependency_rate", type number}, {"total_orders", Int64.Type}, {"units_sold_per_day", type number}, {"late_delivery_risk_rate", type number}, {"avg_shipping_delay_days", type number}, {"profit_ratio_volatility", type number}, {"delivery_risk_rank", Int64.Type}, {"quadrant", type text}, {"imputed_risk", type number}, {"norm_delivery_risk", type number}, {"norm_discount_risk", type number}, {"norm_divergence_risk", type number}, {"composite_risk_score", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

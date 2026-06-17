@@ -1,0 +1,22 @@
+{
+  "name": "Revenue Rank Reality",
+  "dataColors": [
+    "#1D9E75",
+    "#D85A30",
+    "#888780",
+    "#2C2C2A",
+    "#5DCAA5",
+    "#F0997B"
+  ],
+  "background": "#F5F4F0",
+  "foreground": "#2C2C2A",
+  "tableAccent": "#1D9E75",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{"value": "Segoe UI"}],
+        "fontSize": [{"value": 11}]
+      }
+    }
+  }
+}

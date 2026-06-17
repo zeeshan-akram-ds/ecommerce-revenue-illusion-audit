@@ -1,0 +1,66 @@
+table EvidenceSummary
+	lineageTag: 346b6dba-d7d1-4083-86f2-226d3785401d
+
+	column 'Finding ID'
+		dataType: string
+		lineageTag: a9719f7d-cdfd-48c6-b66f-f04203cc35b5
+		summarizeBy: none
+		sourceColumn: Finding ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Theme
+		dataType: string
+		lineageTag: 22345ec7-8533-499e-b3fc-c2963c93ad45
+		summarizeBy: none
+		sourceColumn: Theme
+
+		annotation SummarizationSetBy = Automatic
+
+	column Claim
+		dataType: string
+		lineageTag: 98c80e31-f786-48db-aa1b-c69fdcabb4bc
+		summarizeBy: none
+		sourceColumn: Claim
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Test Applied'
+		dataType: string
+		lineageTag: ff3de138-2af4-46db-8fe3-e29581726bda
+		summarizeBy: none
+		sourceColumn: Test Applied
+
+		annotation SummarizationSetBy = Automatic
+
+	column Result
+		dataType: string
+		lineageTag: 964b70ed-c065-46b0-9453-7aa6e539be98
+		summarizeBy: none
+		sourceColumn: Result
+
+		annotation SummarizationSetBy = Automatic
+
+	column Classification
+		dataType: string
+		lineageTag: 7851f629-efe0-46d5-b304-7e8b0f14d0d0
+		summarizeBy: none
+		sourceColumn: Classification
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EvidenceSummary = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\data-analysis-projects\ecommerce-revenue-illusion-audit\data\processed\statistical_evidence_summary.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Finding ID", type text}, {"Theme", type text}, {"Claim", type text}, {"Test Applied", type text}, {"Result", type text}, {"Classification", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

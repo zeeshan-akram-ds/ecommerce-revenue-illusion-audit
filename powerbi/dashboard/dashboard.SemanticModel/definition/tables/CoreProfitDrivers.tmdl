@@ -1,0 +1,92 @@
+table CoreProfitDrivers
+	lineageTag: d81c1cc0-57fe-4039-8a7e-d27fa3c732ff
+
+	column product_card_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d4884f0-757f-4be4-8736-fcfe810472e8
+		summarizeBy: none
+		sourceColumn: product_card_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 3e76d849-921b-454a-bc7f-33186ac7b78a
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 2524a4ca-a59b-4f94-bcdf-d736694ab3bc
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: adcf1bef-60a4-4f21-9678-568a4a8d7bbe
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_profit
+		dataType: double
+		lineageTag: d77aef84-ed24-4d15-a7c8-17ba87d5d969
+		summarizeBy: sum
+		sourceColumn: total_profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_profit_pct
+		dataType: double
+		lineageTag: 26e7c270-1dea-464e-856c-133f2d3f59b9
+		summarizeBy: sum
+		sourceColumn: net_profit_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column late_delivery_risk_rate
+		dataType: double
+		lineageTag: d4101255-a1e6-4662-a464-328d4311bb2a
+		summarizeBy: sum
+		sourceColumn: late_delivery_risk_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column composite_risk_score
+		dataType: double
+		lineageTag: 248972d1-8769-4979-a95b-60c20a2d04b6
+		summarizeBy: sum
+		sourceColumn: composite_risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition CoreProfitDrivers = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\data-analysis-projects\ecommerce-revenue-illusion-audit\data\processed\core_profit_drivers.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_card_id", Int64.Type}, {"product_name", type text}, {"category_name", type text}, {"total_revenue", type number}, {"total_profit", type number}, {"net_profit_pct", type number}, {"late_delivery_risk_rate", type number}, {"composite_risk_score", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

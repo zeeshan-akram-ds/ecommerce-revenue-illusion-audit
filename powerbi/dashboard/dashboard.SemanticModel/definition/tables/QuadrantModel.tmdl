@@ -1,0 +1,119 @@
+table QuadrantModel
+	lineageTag: 63d77cb4-8751-441a-9893-2dd067f18cd4
+
+	column product_card_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 09ec219e-f869-4b98-88fb-75202d6a65c1
+		summarizeBy: none
+		sourceColumn: product_card_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: c3f7f6bd-606f-4860-a275-6b9b88e4e83b
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 0ddd6249-a409-40f7-8561-4ee2aad2443c
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_revenue
+		dataType: double
+		lineageTag: e6beb86b-3028-4696-945c-5be373df6522
+		summarizeBy: sum
+		sourceColumn: total_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_profit
+		dataType: double
+		lineageTag: c18c72e2-54ad-49f9-992f-67123adb6f76
+		summarizeBy: sum
+		sourceColumn: total_profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column net_profit_pct
+		dataType: double
+		lineageTag: a9f9e64a-c895-4f0b-8a9e-9cd7a2c0df2e
+		summarizeBy: sum
+		sourceColumn: net_profit_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column late_delivery_risk_rate
+		dataType: double
+		lineageTag: 390f6e94-040c-4027-8d97-62f1db94c5cb
+		summarizeBy: sum
+		sourceColumn: late_delivery_risk_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discount_dependency_rate
+		dataType: double
+		lineageTag: 21295291-aafc-4582-a62b-e7876fe423b2
+		summarizeBy: sum
+		sourceColumn: discount_dependency_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rank_divergence
+		dataType: int64
+		formatString: 0
+		lineageTag: 803e173d-bd70-41e8-a3d5-0ad482fb7314
+		summarizeBy: sum
+		sourceColumn: rank_divergence
+
+		annotation SummarizationSetBy = Automatic
+
+	column quadrant
+		dataType: string
+		lineageTag: c99a2487-9628-4155-8321-35f6f6d80680
+		summarizeBy: none
+		sourceColumn: quadrant
+
+		annotation SummarizationSetBy = Automatic
+
+	column composite_risk_score
+		dataType: double
+		lineageTag: 960ddef6-b555-4377-a5e9-86799663dbf8
+		summarizeBy: sum
+		sourceColumn: composite_risk_score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition QuadrantModel = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\data-analysis-projects\ecommerce-revenue-illusion-audit\data\processed\quadrant_classifications.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_card_id", Int64.Type}, {"product_name", type text}, {"category_name", type text}, {"total_revenue", type number}, {"total_profit", type number}, {"net_profit_pct", type number}, {"late_delivery_risk_rate", type number}, {"discount_dependency_rate", type number}, {"rank_divergence", Int64.Type}, {"quadrant", type text}, {"composite_risk_score", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

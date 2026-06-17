@@ -1,0 +1,49 @@
+table DimProduct
+	lineageTag: 85c91eae-7916-438a-8631-95f9f1aa0fc7
+
+	column product_card_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 63a498b3-bb14-469f-8d69-74e65d92effe
+		summarizeBy: none
+		sourceColumn: product_card_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 6dd8cee8-2031-44d5-8a76-a9e139f23808
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 3d851f1e-28c3-4c84-bff9-734f16087696
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: 19a85e08-9340-440e-b51f-4375e694d460
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "revenue_rank_reality"),
+				    analytics_dim_product = Source{[Schema="analytics",Item="dim_product"]}[Data]
+				in
+				    analytics_dim_product
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,84 @@
+table DimDate
+	lineageTag: 455b22cf-e8fe-4a9b-8df2-d065f8e04d99
+
+	column date_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cfd75b2e-c6b8-4dfe-a2b8-262bb2539768
+		summarizeBy: none
+		sourceColumn: date_id
+
+		variation Variation
+			isDefault
+			relationship: b1e32d84-d566-4817-900a-d590acb0a909
+			defaultHierarchy: LocalDateTable_87ec2cd7-fcfc-4bc0-9f31-f99245a2d5fa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: eac141e8-a614-4f2b-9b03-219446de33fd
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bb8a0a9-0072-44ac-8701-dbdd4cbbbc42
+		summarizeBy: sum
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: b8c2bba6-841b-4a48-ab9b-cd05e110d347
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: 80eaf64c-2471-4410-ae3b-407842127cf5
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_of_year
+		dataType: int64
+		formatString: 0
+		lineageTag: a6c81a43-8873-4303-b5c9-f30e02fbed0a
+		summarizeBy: sum
+		sourceColumn: week_of_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week_name
+		dataType: string
+		lineageTag: 699ca449-3423-4790-aa17-a9f3e204b9ab
+		summarizeBy: none
+		sourceColumn: day_of_week_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "revenue_rank_reality"),
+				    analytics_dim_date = Source{[Schema="analytics",Item="dim_date"]}[Data]
+				in
+				    analytics_dim_date
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

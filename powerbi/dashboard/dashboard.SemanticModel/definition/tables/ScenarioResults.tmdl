@@ -1,0 +1,73 @@
+table ScenarioResults
+	lineageTag: a39aacd3-4966-48c2-ad15-ad1e49b149eb
+
+	column Scenario
+		dataType: string
+		lineageTag: aba3aeb5-b667-4731-a637-a8a95afbb5fc
+		summarizeBy: none
+		sourceColumn: Scenario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Action
+		dataType: string
+		lineageTag: be7d3624-3dd0-48e0-953a-446d58cde72b
+		summarizeBy: none
+		sourceColumn: Action
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projected Revenue'
+		dataType: double
+		lineageTag: 94a820c8-6011-417b-af91-90d4b1cf01c6
+		summarizeBy: sum
+		sourceColumn: Projected Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Projected Profit'
+		dataType: double
+		lineageTag: a2be4e42-b019-4ac0-b4c3-27fbbdaf470f
+		summarizeBy: sum
+		sourceColumn: Projected Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Profit Impact ($)'
+		dataType: double
+		lineageTag: 799f1c2f-4414-48df-8ff4-c01d7dcf4c4c
+		summarizeBy: sum
+		sourceColumn: Profit Impact ($)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Profit Retained (%)'
+		dataType: double
+		lineageTag: 138788f0-c21d-46a5-b9ff-fd92aa0591bd
+		summarizeBy: sum
+		sourceColumn: Profit Retained (%)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition ScenarioResults = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("D:\data-analysis-projects\ecommerce-revenue-illusion-audit\data\processed\scenario_simulation_results.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Scenario", type text}, {"Action", type text}, {"Projected Revenue", type number}, {"Projected Profit", type number}, {"Profit Impact ($)", type number}, {"Profit Retained (%)", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

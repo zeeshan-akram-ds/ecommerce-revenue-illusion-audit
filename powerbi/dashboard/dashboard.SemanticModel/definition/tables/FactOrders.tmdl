@@ -1,0 +1,193 @@
+table FactOrders
+	lineageTag: 47b30b08-636a-4605-a4c5-191248e5057f
+
+	column order_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b64f77f-990a-43bb-9572-e2ab68fec864
+		summarizeBy: sum
+		sourceColumn: order_item_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_card_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 1581aa73-0c22-4cbf-92fb-44f44a410e22
+		summarizeBy: sum
+		sourceColumn: product_card_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column region_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 297e3ca6-7aa3-4845-aeb2-6622a88ae008
+		summarizeBy: none
+		sourceColumn: region_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_id
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 692490b6-1d8d-4627-80f9-5573875294e4
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sales
+		dataType: double
+		lineageTag: 1aa8c2b3-1de4-4da1-ab98-f16e9690aef9
+		summarizeBy: sum
+		sourceColumn: sales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_item_total
+		dataType: double
+		lineageTag: 49bd6f67-5faa-41d6-b6bf-00d8479a5bb0
+		summarizeBy: sum
+		sourceColumn: order_item_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column benefit_per_order
+		dataType: double
+		lineageTag: e66a8ee5-6c18-4082-a14c-2afbddb6fee1
+		summarizeBy: sum
+		sourceColumn: benefit_per_order
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_profit_per_order
+		dataType: double
+		lineageTag: ea664e64-4781-4908-82ea-b397320c5efe
+		summarizeBy: sum
+		sourceColumn: order_profit_per_order
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_item_discount
+		dataType: double
+		lineageTag: 1b3afebe-c4e5-4594-8e99-5387309d20fa
+		summarizeBy: sum
+		sourceColumn: order_item_discount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_item_profit_ratio
+		dataType: double
+		lineageTag: 9a790bc9-d4d4-46f2-b9fe-747169e7826a
+		summarizeBy: sum
+		sourceColumn: order_item_profit_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_item_discount_rate
+		dataType: double
+		lineageTag: c0ac143b-1662-4010-890b-0772d9358939
+		summarizeBy: sum
+		sourceColumn: order_item_discount_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_item_quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 54532c77-566b-495f-955c-925f196c3e26
+		summarizeBy: sum
+		sourceColumn: order_item_quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_for_shipping_real
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b4a7f76-2aed-4de9-8715-295bda7cc330
+		summarizeBy: sum
+		sourceColumn: days_for_shipping_real
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_for_shipment_scheduled
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a9f99ad-6ad4-44c3-bd7c-e77c9eae9e23
+		summarizeBy: sum
+		sourceColumn: days_for_shipment_scheduled
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_delay_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 089143e5-e80c-45ab-ad35-8fba95f71e23
+		summarizeBy: sum
+		sourceColumn: shipping_delay_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column late_delivery_risk
+		dataType: int64
+		formatString: 0
+		lineageTag: f702a885-ed9b-4c6e-aa51-5c3f8c06f22c
+		summarizeBy: sum
+		sourceColumn: late_delivery_risk
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_status
+		dataType: string
+		lineageTag: 15046fb9-8613-4e65-b9b2-fe2fd9e57b18
+		summarizeBy: none
+		sourceColumn: delivery_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_mode
+		dataType: string
+		lineageTag: 2a4e8b40-9fa7-4d38-a503-2b89ddf75164
+		summarizeBy: none
+		sourceColumn: shipping_mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 221c8a4b-936d-4646-beb4-8ea8f8a22819
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactOrders = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost", "revenue_rank_reality"),
+				    analytics_fact_orders = Source{[Schema="analytics",Item="fact_orders"]}[Data]
+				in
+				    analytics_fact_orders
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

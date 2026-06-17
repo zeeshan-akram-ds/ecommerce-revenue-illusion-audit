@@ -25,6 +25,8 @@ Thumbs.db
 # Power BI temp files
 *.pbix.bak
 *.pbix
+.pbi/localSettings.json
+powerbi/.pbi/
 
 # Jupyter
 .jupyter/
