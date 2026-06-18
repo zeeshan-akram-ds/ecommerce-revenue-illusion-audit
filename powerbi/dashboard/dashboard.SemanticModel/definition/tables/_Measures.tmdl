@@ -2,17 +2,19 @@ table _Measures
 	lineageTag: d752c61f-cb30-4105-a95b-fdf945d4f2c8
 
 	measure 'Total Revenue' = SUM(FactOrders[sales])
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
 		lineageTag: 23ef1361-f89d-474d-8e26-227aa7d6ca64
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'Total Profit' = SUM(FactOrders[order_profit_per_order])
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
 		lineageTag: 02371093-1ac0-4688-bcf6-defe51831cdc
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'Net Margin %' = DIVIDE([Total Profit], [Total Revenue])
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 9cb2983b-9e51-4199-a11a-f0a9c789264c
 
 	measure 'Total Orders' = COUNTROWS(FactOrders)
@@ -20,9 +22,8 @@ table _Measures
 		lineageTag: d154633f-6e3c-4515-8911-e7d069bf5093
 
 	measure 'Late Delivery Rate' = AVERAGE(FactOrders[late_delivery_risk])
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 75172df4-37cb-4d6d-ad8e-862746c07de2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Avg Shipping Delay' = AVERAGE(FactOrders[shipping_delay_days])
 		lineageTag: a581a7dc-77d9-4863-870a-9f9318e67851
@@ -34,9 +35,11 @@ table _Measures
 		lineageTag: d3479d8a-8833-47ce-979b-f79863022ac5
 
 	measure 'Loss Order %' = DIVIDE([Loss Order Count], [Total Orders])
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: b3cb26e7-5712-4c61-9773-36132ca0db4a
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure 'Products Any Loss Order' = "118 / 118"
+		lineageTag: 18469fdf-ec33-4684-b3f2-09f6bd31d467
 
 	partition _Measures = m
 		mode: import
