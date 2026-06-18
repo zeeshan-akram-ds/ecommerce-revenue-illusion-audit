@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "90245c501dd65db58b54",
+  "name": "9a0e096c0017e3c8a6bc",
   "position": {
-    "x": 1060,
-    "y": 320,
-    "z": 19000,
-    "height": 68.75,
-    "width": 140,
-    "tabOrder": 18000
+    "x": 20,
+    "y": 80,
+    "z": 2000,
+    "height": 40,
+    "width": 350,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,22 +19,13 @@
               {
                 "textRuns": [
                   {
-                    "value": "84.7%",
+                    "value": "No SKU in this catalog is operationally clean.",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "fontSize": "18pt"
+                      "fontSize": "11pt",
+                      "color": "#0f6e56"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "center"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "REVENUE"
-                  }
-                ],
-                "horizontalTextAlignment": "center"
+                ]
               }
             ]
           }
@@ -57,5 +48,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "9ee7d6ebd288b5be9bd8"
 }

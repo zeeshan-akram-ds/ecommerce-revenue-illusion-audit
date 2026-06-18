@@ -61,6 +61,21 @@
           "name": "Revenue_Rank_Reality6121218469285694.json",
           "path": "Revenue_Rank_Reality6121218469285694.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "warning-sign10715261055967129.png",
+          "path": "warning-sign10715261055967129.png",
+          "type": "Image"
+        },
+        {
+          "name": "statistics09830727030100828.png",
+          "path": "statistics09830727030100828.png",
+          "type": "Image"
+        },
+        {
+          "name": "3d-alarm28206813107968043.png",
+          "path": "3d-alarm28206813107968043.png",
+          "type": "Image"
         }
       ]
     }

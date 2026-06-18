@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "90245c501dd65db58b54",
+  "name": "ca535e2baeb8d9090a44",
   "position": {
-    "x": 1060,
-    "y": 320,
-    "z": 19000,
-    "height": 68.75,
-    "width": 140,
-    "tabOrder": 18000
+    "x": 52,
+    "y": 15,
+    "z": 1000,
+    "height": 60,
+    "width": 315,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,22 +19,14 @@
               {
                 "textRuns": [
                   {
-                    "value": "84.7%",
+                    "value": "All 118 products have recorded a loss-making order",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
-                      "fontSize": "18pt"
+                      "fontSize": "14pt",
+                      "color": "#0f6e56"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "center"
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "REVENUE"
-                  }
-                ],
-                "horizontalTextAlignment": "center"
+                ]
               }
             ]
           }
@@ -57,5 +49,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "9ee7d6ebd288b5be9bd8"
 }
