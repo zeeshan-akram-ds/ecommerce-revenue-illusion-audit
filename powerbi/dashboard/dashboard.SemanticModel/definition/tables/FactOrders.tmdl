@@ -14,7 +14,7 @@ table FactOrders
 		dataType: int64
 		formatString: 0
 		lineageTag: 1581aa73-0c22-4cbf-92fb-44f44a410e22
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: product_card_id
 
 		annotation SummarizationSetBy = Automatic

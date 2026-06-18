@@ -27,6 +27,7 @@ ref table LocalDateTable_87ec2cd7-fcfc-4bc0-9f31-f99245a2d5fa
 ref table DimRegion
 ref table FactOrders
 ref table _Measures
+ref table LocalDateTable_a5242d34-3240-400f-b322-6f9f05a7f5ee
 
 ref cultureInfo en-US
 

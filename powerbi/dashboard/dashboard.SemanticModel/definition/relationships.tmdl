@@ -14,7 +14,6 @@ relationship AutoDetected_6924447b-597b-4968-8025-81277fd24584
 	toColumn: DimRegion.region_id
 
 relationship bc5f3b10-95b1-021e-14c4-51f7442731fb
-	isActive: false
 	fromColumn: FactOrders.product_card_id
 	toColumn: DimProduct.product_card_id
 
@@ -36,4 +35,9 @@ relationship d1d6751c-c25c-d2ec-13b9-5e870bc17817
 	crossFilteringBehavior: bothDirections
 	fromColumn: RevenueTrapDetail.product_card_id
 	toColumn: DimProduct.product_card_id
+
+relationship c9d68e63-7143-4555-bc32-ceef64e07963
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.MonthStart
+	toColumn: LocalDateTable_a5242d34-3240-400f-b322-6f9f05a7f5ee.Date
 

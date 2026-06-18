@@ -69,6 +69,24 @@ table DimDate
 
 		annotation SummarizationSetBy = Automatic
 
+	column MonthStart =
+			
+			DATE(YEAR(DimDate[date_id]), MONTH(DimDate[date_id]), 1)
+		formatString: Short Date
+		lineageTag: b660623a-1756-4e5c-8723-7f4171b31187
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: c9d68e63-7143-4555-bc32-ceef64e07963
+			defaultHierarchy: LocalDateTable_a5242d34-3240-400f-b322-6f9f05a7f5ee.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition DimDate = m
 		mode: import
 		source =

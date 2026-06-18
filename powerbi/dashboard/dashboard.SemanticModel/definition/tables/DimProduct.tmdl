@@ -34,6 +34,18 @@ table DimProduct
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Core Status' = IF(DimProduct[product_card_id] IN {1004, 365, 957, 191, 502, 1073, 1014, 403}, "Core 8 SKUs", "Remaining 110 SKUs")
+		lineageTag: f81b3eaa-4ee1-4670-b7f3-3861ce6d720a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Single Row' = ""
+		lineageTag: 733efe71-0678-40b0-ba79-3174ca70b591
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimProduct = m
 		mode: import
 		source =
