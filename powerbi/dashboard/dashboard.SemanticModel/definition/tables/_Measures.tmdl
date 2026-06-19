@@ -79,6 +79,28 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 165bf9d4-7d41-4539-95fd-ed0504eb0fba
 
+	measure Color_RankDivergence =
+			
+			SWITCH(
+			    TRUE(),
+			    MAX(productkpis[rank_divergence]) < 0, "#D85A30", // Revenue Trap (Red)
+			    MAX(productkpis[rank_divergence]) > 0, "#1D9E75", // Hidden Performer (Teal)
+			    "#888780" // Aligned (Gray)
+			)
+		lineageTag: 2d33f347-554b-4f4c-8350-78f46e9803ad
+
+	measure 'Rank Revenue' =
+			
+			RANKX(ALL(DimProduct[product_name]), [Total Revenue], , DESC, Dense)
+		formatString: 0
+		lineageTag: d71ee75c-59c7-4b87-86ca-018c831b97d2
+
+	measure 'Rank Profit' =
+			
+			RANKX(ALL(DimProduct[product_name]), [Total Profit], , DESC, Dense)
+		formatString: 0
+		lineageTag: 63386692-2cae-4365-8e23-b8a52d628bfd
+
 	partition _Measures = m
 		mode: import
 		source =

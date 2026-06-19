@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "35c4d26bce68b0b06b09",
+  "name": "2f4e56402d03bc098366",
   "position": {
-    "x": 30,
-    "y": 10,
-    "z": 1000,
-    "height": 68,
-    "width": 620,
-    "tabOrder": 0
+    "x": 99.090909090909079,
+    "y": 411.81818181818181,
+    "z": 14000,
+    "height": 49.090909090909086,
+    "width": 152.72727272727272,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Revenue Reality: The Divergence Trap",
+                    "value": "SOLE E35 Elliptical",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
-                      "fontSize": "20pt"
+                      "color": "#d85a30"
                     }
                   }
                 ]
@@ -30,10 +30,25 @@
               {
                 "textRuns": [
                   {
-                    "value": "E-Commerce Profit & Operational Audit · DataCo Supply Chain · 180,519 Transactions",
+                    "value": "(Rev: 36 ",
                     "textStyle": {
-                      "fontSize": "12pt",
-                      "color": "#888780"
+                      "fontFamily": "Segoe (Bold)",
+                      "color": "#d85a30"
+                    }
+                  },
+                  {
+                    "value": "→",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "13.3333px",
+                      "color": "#d85a30"
+                    }
+                  },
+                  {
+                    "value": " Prof: 118)",
+                    "textStyle": {
+                      "fontFamily": "Segoe (Bold)",
+                      "color": "#d85a30"
                     }
                   }
                 ]
