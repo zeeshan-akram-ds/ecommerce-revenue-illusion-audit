@@ -40,12 +40,6 @@ table DimProduct
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Single Row' = ""
-		lineageTag: 733efe71-0678-40b0-ba79-3174ca70b591
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	partition DimProduct = m
 		mode: import
 		source =

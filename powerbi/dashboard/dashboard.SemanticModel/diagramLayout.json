@@ -150,18 +150,6 @@
             "width": 234
           },
           "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 2033.504147063642,
-            "y": 216.11141440378526
-          },
-          "nodeIndex": "Diagonal_Line",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
         }
       ],
       "name": "All tables",

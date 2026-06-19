@@ -28,7 +28,6 @@ ref table DimRegion
 ref table FactOrders
 ref table _Measures
 ref table LocalDateTable_a5242d34-3240-400f-b322-6f9f05a7f5ee
-ref table Diagonal_Line
 
 ref cultureInfo en-US
 

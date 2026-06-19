@@ -48,13 +48,12 @@ table ProductKPIs
 
 	column net_profit_pct
 		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: e229cfb7-721d-4ed7-8bd8-eb1c2c9669ba
 		summarizeBy: sum
 		sourceColumn: net_profit_pct
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column revenue_rank
 		dataType: int64
@@ -157,6 +156,19 @@ table ProductKPIs
 		lineageTag: 7a2ac94e-885a-4cd4-a086-29a777693749
 		summarizeBy: none
 		sourceColumn: delivery_risk_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name Short' = ```
+			
+			IF(
+			    LEN(ProductKPIs[product_name]) > 25, 
+			    LEFT(ProductKPIs[product_name], 22) & "...", 
+			    ProductKPIs[product_name]
+			)
+			```
+		lineageTag: 0b9cab2e-0bd8-4668-928a-097b79296548
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

@@ -101,6 +101,13 @@ table _Measures
 		formatString: 0
 		lineageTag: 63386692-2cae-4365-8e23-b8a52d628bfd
 
+	measure Trap_TieBreaker =
+			
+			MIN(productkpis[rank_divergence]) + (MIN(productkpis[revenue_rank]) / 10000)
+		lineageTag: a820ccd7-6ac6-4fb1-99a8-79bc63e20c00
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =
