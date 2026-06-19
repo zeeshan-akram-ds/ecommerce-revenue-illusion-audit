@@ -172,6 +172,13 @@ table ProductKPIs
 
 		annotation SummarizationSetBy = Automatic
 
+	column Catalog_Pct = productkpis[profit_rank] / 118
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f5cd9cad-9cf1-468f-8a68-49bcfaa5c378
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ProductKPIs = m
 		mode: import
 		source =

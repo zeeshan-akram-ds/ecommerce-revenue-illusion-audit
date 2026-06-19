@@ -108,6 +108,15 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Cumulative_Profit_Pct =
+			
+			VAR CurrentRank = MAX(productkpis[profit_rank])
+			VAR CumulProfit = CALCULATE(SUM(productkpis[total_profit]), ALL(productkpis), productkpis[profit_rank] <= CurrentRank)
+			VAR TotalProf = CALCULATE(SUM(productkpis[total_profit]), ALL(productkpis))
+			RETURN DIVIDE(CumulProfit, TotalProf)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 1d9bb638-5469-4256-ae60-53d27a83975a
+
 	partition _Measures = m
 		mode: import
 		source =
