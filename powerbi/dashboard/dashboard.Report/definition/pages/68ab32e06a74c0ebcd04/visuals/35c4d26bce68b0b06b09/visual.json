@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "e295f1cf0054017593c7",
+  "name": "35c4d26bce68b0b06b09",
   "position": {
     "x": 30,
     "y": 10,
     "z": 0,
-    "height": 70,
-    "width": 615,
+    "height": 68,
+    "width": 620,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Executive Overview",
+                    "value": "Revenue Reality: The Divergence Trap",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "20pt"
