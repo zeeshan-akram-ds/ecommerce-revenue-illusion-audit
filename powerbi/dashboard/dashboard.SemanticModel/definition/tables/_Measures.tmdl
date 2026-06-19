@@ -41,6 +41,44 @@ table _Measures
 	measure 'Products Any Loss Order' = "118 / 118"
 		lineageTag: 18469fdf-ec33-4684-b3f2-09f6bd31d467
 
+	measure KPI2_TrapRevenue =
+			
+			CALCULATE(
+			    SUM(productkpis[total_revenue]),
+			    productkpis[rank_divergence] < 0
+			)
+		lineageTag: 2b040552-cf18-49d3-8b5e-da747b884692
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure KPI2_TrapSKUCount =
+			
+			CALCULATE(
+			    COUNTROWS(productkpis),
+			    productkpis[rank_divergence] < 0
+			)
+		formatString: 0
+		lineageTag: ade333f7-7df2-4261-9e36-4e1eb69cdc84
+
+	measure KPI2_WorstDivergence =
+			
+			MIN(productkpis[rank_divergence])
+		formatString: 0
+		lineageTag: 5d243e2d-7788-4454-b815-534f9e39cc73
+
+	measure KPI2_Top8ProfitShare = ```
+			
+			VAR Top8Profit = 
+			    CALCULATE(
+			        SUM(productkpis[total_profit]),
+			        TOPN(8, productkpis, productkpis[total_profit], DESC)
+			    )
+			RETURN
+			    DIVIDE(Top8Profit, SUM(productkpis[total_profit]))
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 165bf9d4-7d41-4539-95fd-ed0504eb0fba
+
 	partition _Measures = m
 		mode: import
 		source =
