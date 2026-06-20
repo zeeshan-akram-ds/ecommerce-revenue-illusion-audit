@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI2_TrapSKUCount"
+                  "Property": "KPI3_ZombieRevenueShare"
                 }
               },
-              "queryRef": "_Measures.KPI2_TrapSKUCount",
-              "nativeQueryRef": "KPI2_TrapSKUCount"
+              "queryRef": "_Measures.KPI3_ZombieRevenueShare",
+              "nativeQueryRef": "KPI3_ZombieRevenueShare"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI2_TrapSKUCount"
+                "Property": "KPI3_ZombieRevenueShare"
               }
             },
             "direction": "Descending"
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'NEGATIVE DIVERGENCE SKUS'"
+                  "Value": "'REVENUE TIED TO ZOMBIES'"
                 }
               }
             },

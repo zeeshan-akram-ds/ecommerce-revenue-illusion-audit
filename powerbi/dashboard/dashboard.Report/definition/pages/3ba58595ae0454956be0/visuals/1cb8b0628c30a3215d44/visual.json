@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI2_TrapRevenue"
+                  "Property": "KPI3_ZombieSKUCount"
                 }
               },
-              "queryRef": "_Measures.KPI2_TrapRevenue",
-              "nativeQueryRef": "KPI2_TrapRevenue"
+              "queryRef": "_Measures.KPI3_ZombieSKUCount",
+              "nativeQueryRef": "KPI3_ZombieSKUCount"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI2_TrapRevenue"
+                "Property": "KPI3_ZombieSKUCount"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2C2C2A'"
+                      "Value": "'#D85A30'"
                     }
                   }
                 }
@@ -83,14 +83,14 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1000000D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "0L"
                 }
               }
             }
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'REVENUE IN TRAP SKUS'"
+                  "Value": "'ZOMBIE SKUS IDENTIFIED'"
                 }
               }
             },
@@ -230,6 +230,19 @@
                       "Value": "'#888780'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

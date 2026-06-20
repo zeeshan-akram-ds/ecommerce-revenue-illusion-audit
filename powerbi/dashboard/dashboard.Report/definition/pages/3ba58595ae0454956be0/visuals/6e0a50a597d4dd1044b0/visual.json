@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI2_Top8ProfitShare"
+                  "Property": "KPI3_HighestRiskScore"
                 }
               },
-              "queryRef": "_Measures.KPI2_Top8ProfitShare",
-              "nativeQueryRef": "KPI2_Top8ProfitShare"
+              "queryRef": "_Measures.KPI3_HighestRiskScore",
+              "nativeQueryRef": "KPI3_HighestRiskScore"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI2_Top8ProfitShare"
+                "Property": "KPI3_HighestRiskScore"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1D9E75'"
+                      "Value": "'#D85A30'"
                     }
                   }
                 }
@@ -83,7 +83,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             },
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TOP 8 SKUS PROFIT SHARE'"
+                  "Value": "'HIGHEST RISK SCORE'"
                 }
               }
             },

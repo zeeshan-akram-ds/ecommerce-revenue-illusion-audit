@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "11a0ae873cec74923116",
   "position": {
-    "x": 50,
+    "x": 75,
     "y": 80.24586121873898,
     "z": 1000,
     "height": 28,
-    "width": 222.18527650581191,
+    "width": 170,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Capital allocated to trap SKUs",
+                    "value": "24% of the full catalog",
                     "textStyle": {
                       "color": "#888780"
                     }

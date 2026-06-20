@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI2_WorstDivergence"
+                  "Property": "KPI3_AvgCompositeRisk_Cut"
                 }
               },
-              "queryRef": "_Measures.KPI2_WorstDivergence",
-              "nativeQueryRef": "KPI2_WorstDivergence"
+              "queryRef": "_Measures.KPI3_AvgCompositeRisk_Cut",
+              "nativeQueryRef": "KPI3_AvgCompositeRisk_Cut"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI2_WorstDivergence"
+                "Property": "KPI3_AvgCompositeRisk_Cut"
               }
             },
             "direction": "Descending"
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'WORST DIVERGENCE SCORE'"
+                  "Value": "'AVG RISK SCORE (ZOMBIES)'"
                 }
               }
             },

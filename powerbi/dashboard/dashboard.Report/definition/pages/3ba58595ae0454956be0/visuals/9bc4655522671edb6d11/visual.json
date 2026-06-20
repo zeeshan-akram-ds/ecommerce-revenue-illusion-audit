@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "9bc4655522671edb6d11",
   "position": {
-    "x": 70,
+    "x": 90,
     "y": 79.456612723214278,
     "z": 1000,
     "height": 28,
-    "width": 180,
+    "width": 160,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Just 6.8% of the catalog",
+                    "value": "SOLE E25 Elliptical",
                     "textStyle": {
                       "color": "#888780"
                     }
