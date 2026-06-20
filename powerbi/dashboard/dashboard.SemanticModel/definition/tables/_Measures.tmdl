@@ -117,6 +117,45 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 1d9bb638-5469-4256-ae60-53d27a83975a
 
+	measure KPI3_ZombieSKUCount = ```
+			
+			CALCULATE(
+			    COUNTROWS(QuadrantModel), 
+			    QuadrantModel[quadrant] = "Cut Candidates"
+			)
+			```
+		formatString: 0
+		lineageTag: a231d832-b238-473c-94a6-9055c84aa4de
+
+	measure KPI3_ZombieRevenueShare = ```
+			
+			VAR ZombieRev = 
+			    CALCULATE(
+			        SUM(ProductKPIs[total_revenue]), 
+			        QuadrantModel[quadrant] = "Cut Candidates"
+			    )
+			RETURN 
+			    DIVIDE(ZombieRev, SUM(ProductKPIs[total_revenue]))
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c7601f9e-c811-4d7f-9072-0681f7e62de9
+
+	measure KPI3_AvgCompositeRisk_Cut = ```
+			
+			CALCULATE(
+			    AVERAGE(QuadrantModel[composite_risk_score]), 
+			    QuadrantModel[quadrant] = "Cut Candidates"
+			)
+			```
+		formatString: 0.0
+		lineageTag: db95c957-edae-4830-9194-d7972a2b2cc5
+
+	measure KPI3_HighestRiskScore =
+			
+			MAX(QuadrantModel[composite_risk_score])
+		formatString: 0.0
+		lineageTag: 272aabeb-1b1c-4b34-8f3d-267bf8f4c332
+
 	partition _Measures = m
 		mode: import
 		source =

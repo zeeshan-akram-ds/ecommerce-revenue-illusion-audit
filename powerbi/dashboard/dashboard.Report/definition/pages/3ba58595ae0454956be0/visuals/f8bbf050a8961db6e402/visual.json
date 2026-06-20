@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "2f4e56402d03bc098366",
+  "name": "f8bbf050a8961db6e402",
   "position": {
-    "x": 99.090909090909079,
-    "y": 411.81818181818181,
-    "z": 14000,
-    "height": 49.090909090909086,
-    "width": 165,
-    "tabOrder": 10000
+    "x": 30,
+    "y": 10,
+    "z": 1000,
+    "height": 68,
+    "width": 620,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "SOLE E35 Elliptical",
+                    "value": "SKU Intelligence: The Action Matrix",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
-                      "color": "#d85a30"
+                      "fontSize": "20pt"
                     }
                   }
                 ]
@@ -30,25 +30,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "(Rev: 36 ",
+                    "value": "E-Commerce Profit & Operational Audit · DataCo Supply Chain · 180,519 Transactions",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "color": "#d85a30"
-                    }
-                  },
-                  {
-                    "value": "→",
-                    "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "fontSize": "13.3333px",
-                      "color": "#d85a30"
-                    }
-                  },
-                  {
-                    "value": " Prof: 118)",
-                    "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "color": "#d85a30"
+                      "fontSize": "12pt",
+                      "color": "#888780"
                     }
                   }
                 ]
