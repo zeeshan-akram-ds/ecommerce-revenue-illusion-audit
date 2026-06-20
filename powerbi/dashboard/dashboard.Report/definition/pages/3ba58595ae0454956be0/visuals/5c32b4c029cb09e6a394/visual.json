@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "3f3134b4bd548cc24e34",
+  "name": "5c32b4c029cb09e6a394",
   "position": {
-    "x": 779.99999999999989,
-    "y": 222.72727272727272,
-    "z": 15000,
+    "x": 800,
+    "y": 220,
+    "z": 11000,
     "height": 300,
-    "width": 469.99999999999994,
-    "tabOrder": 13000
+    "width": 450,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -32,18 +32,23 @@
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "ProductKPIs"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "QuadrantModel"
+                        }
+                      },
+                      "Property": "composite_risk_score"
                     }
                   },
-                  "Property": "revenue_rank"
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(ProductKPIs.revenue_rank)",
-              "nativeQueryRef": "Revenue Rank",
-              "displayName": "Revenue Rank"
+              "queryRef": "Sum(QuadrantModel.composite_risk_score)",
+              "nativeQueryRef": "Risk Score",
+              "displayName": "Risk Score"
             },
             {
               "field": {
@@ -53,27 +58,32 @@
                       "Entity": "ProductKPIs"
                     }
                   },
-                  "Property": "profit_rank"
+                  "Property": "late_delivery_risk_rate"
                 }
               },
-              "queryRef": "Sum(ProductKPIs.profit_rank)",
-              "nativeQueryRef": "Profit Rank",
-              "displayName": "Profit Rank"
+              "queryRef": "Sum(ProductKPIs.late_delivery_risk_rate)",
+              "nativeQueryRef": "late_delivery_risk_rate",
+              "displayName": "Late Delivery (%)"
             },
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "ProductKPIs"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ProductKPIs"
+                        }
+                      },
+                      "Property": "total_revenue"
                     }
                   },
-                  "Property": "net_profit_pct"
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(ProductKPIs.net_profit_pct)",
-              "nativeQueryRef": "Net Profit Pct",
-              "displayName": "Net Profit Pct"
+              "queryRef": "Sum(ProductKPIs.total_revenue)",
+              "nativeQueryRef": "Revenue",
+              "displayName": "Revenue"
             }
           ]
         }
@@ -82,21 +92,39 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "ProductKPIs"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "QuadrantModel"
+                      }
+                    },
+                    "Property": "composite_risk_score"
                   }
                 },
-                "Property": "revenue_rank"
+                "Function": 0
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
     },
     "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "grid": [
         {
           "properties": {
@@ -105,44 +133,27 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E5E3DC'"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#888780'"
+                      "Value": "'#E6E6E4'"
                     }
                   }
                 }
               }
             },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F5F4F0'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
+            "gridVertical": {
               "expr": {
                 "Literal": {
-                  "Value": "'Left'"
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E6E6E4'"
+                    }
+                  }
                 }
               }
             }
@@ -152,25 +163,10 @@
       "values": [
         {
           "properties": {
-            "fontColorPrimary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#2C2C2A'"
-                    }
-                  }
-                }
-              }
-            },
-            "backColorPrimary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F5F4F0'"
-                    }
-                  }
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             },
@@ -188,84 +184,7 @@
           }
         },
         {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 2,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "ProductKPIs"
-                                        }
-                                      },
-                                      "Property": "net_profit_pct"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0.05D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#2C2C2A'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "ProductKPIs"
-                                        }
-                                      },
-                                      "Property": "net_profit_pct"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0.05D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#D85A30'"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -274,38 +193,187 @@
                 }
               }
             ],
-            "metadata": "Sum(ProductKPIs.net_profit_pct)"
+            "metadata": "Sum(QuadrantModel.composite_risk_score)"
           }
         }
       ],
-      "total": [
+      "columnHeaders": [
         {
           "properties": {
-            "totals": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
                 }
               }
             }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "dataBars": {
+              "minValue": {
+                "expr": {
+                  "Literal": {
+                    "Value": "0D"
+                  }
+                }
+              },
+              "maxValue": {
+                "expr": {
+                  "Literal": {
+                    "Value": "100D"
+                  }
+                }
+              },
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#F4C2B2'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#888780'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#FFFFFF'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(QuadrantModel.composite_risk_score)"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "148D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ProductKPIs.Product Name Short"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(QuadrantModel.composite_risk_score)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "106D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(ProductKPIs.late_delivery_risk_rate)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(ProductKPIs.total_revenue)"
           }
         }
       ]
     },
     "visualContainerObjects": {
-      "stylePreset": [
-        {
-          "properties": {
-            "name": {
-              "expr": {
-                "Literal": {
-                  "Value": "'None'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "title": [
         {
           "properties": {
@@ -319,14 +387,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Worst 10: Revenue Rank vs. Profit Rank'"
+                  "Value": "'Top 10 High-Risk SKUs'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -351,23 +419,6 @@
           }
         }
       ],
-      "background": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
       "dropShadow": [
         {
           "properties": {
@@ -375,6 +426,48 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "preset": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            },
+            "angle": {
+              "expr": {
+                "Literal": {
+                  "Value": "90L"
+                }
+              }
+            },
+            "shadowDistance": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            },
+            "shadowBlur": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            },
+            "shadowSpread": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "70L"
                 }
               }
             },
@@ -386,13 +479,6 @@
                       "Value": "'#E5E3DC'"
                     }
                   }
-                }
-              }
-            },
-            "preset": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Bottom'"
                 }
               }
             }
@@ -413,8 +499,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -436,7 +523,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e2a9ea138040a40bd451",
+        "name": "d1e7f5f2d0455a589015",
         "field": {
           "Column": {
             "Expression": {
@@ -444,7 +531,7 @@
                 "Entity": "ProductKPIs"
               }
             },
-            "Property": "rank_divergence"
+            "Property": "Product Name Short"
           }
         },
         "type": "TopN",
@@ -477,14 +564,14 @@
                               "Source": "p"
                             }
                           },
-                          "Property": "rank_divergence"
+                          "Property": "Product Name Short"
                         },
                         "Name": "field"
                       }
                     ],
                     "OrderBy": [
                       {
-                        "Direction": 1,
+                        "Direction": 2,
                         "Expression": {
                           "Measure": {
                             "Expression": {
@@ -492,7 +579,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Trap_TieBreaker"
+                            "Property": "Risk_TieBreaker"
                           }
                         }
                       }
@@ -521,7 +608,7 @@
                             "Source": "p"
                           }
                         },
-                        "Property": "rank_divergence"
+                        "Property": "Product Name Short"
                       }
                     }
                   ],
