@@ -156,6 +156,35 @@ table _Measures
 		formatString: 0.0
 		lineageTag: 272aabeb-1b1c-4b34-8f3d-267bf8f4c332
 
+	measure Label_HeroSKU = ```
+			
+			VAR TopGenerator = 
+			    CALCULATE(
+			        MAX(ProductKPIs[Product Name Short]),
+			        TOPN(
+			            1, 
+			            FILTER(QuadrantModel, QuadrantModel[quadrant] = "Cash Generators"), 
+			            CALCULATE(SUM(ProductKPIs[total_revenue])), 
+			            DESC
+			        )
+			    )
+			RETURN 
+			    IF(SELECTEDVALUE(ProductKPIs[Product Name Short]) = TopGenerator, TopGenerator, BLANK())
+			```
+		lineageTag: ab72079e-d1f2-4927-bc62-8673cd2fcebd
+
+	measure Chart_BubbleSize = ```
+			
+			IF(
+			    SUM(ProductKPIs[total_revenue]) > 0, 
+			    SQRT(SUM(ProductKPIs[total_revenue])), 
+			    0
+			)
+			```
+		lineageTag: 28ab99a9-7542-4415-afba-ee90e4ecd17a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =
