@@ -201,6 +201,35 @@ table _Measures
 		formatString: 0%;-0%;0%
 		lineageTag: aff264eb-0714-4a4c-87b6-1ec836f28985
 
+	measure KPI4_FirstClassLateRate = ```
+			
+			CALCULATE(
+			    [Late Delivery Rate], 
+			    FactOrders[shipping_mode] = "First Class"
+			)
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 61446d5c-888b-4590-a427-7cb25aa141a4
+
+	measure KPI4_StandardClassLateRate = ```
+			
+			CALCULATE(
+			    [Late Delivery Rate], 
+			    FactOrders[shipping_mode] = "Standard Class"
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0ae1c6c6-ba9f-4f07-80d6-b1b5cf3af86a
+
+	measure KPI4_AvgDiscountDependency =
+			
+			AVERAGE(ProductKPIs[discount_dependency_rate]) / 100
+		formatString: 0%;-0%;0%
+		lineageTag: d80a548a-a08e-4a0e-8eb3-bcfe20e0a656
+
+	measure KPI4_DiscountMarginLink = "None"
+		lineageTag: ae0d2c8c-ea83-43b7-b11a-158ae1db5f0d
+
 	partition _Measures = m
 		mode: import
 		source =

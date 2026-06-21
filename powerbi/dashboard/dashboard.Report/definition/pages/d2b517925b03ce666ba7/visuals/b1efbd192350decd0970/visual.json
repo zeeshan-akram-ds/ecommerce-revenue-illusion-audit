@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI3_ZombieSKUCount"
+                  "Property": "KPI4_FirstClassLateRate"
                 }
               },
-              "queryRef": "_Measures.KPI3_ZombieSKUCount",
-              "nativeQueryRef": "KPI3_ZombieSKUCount"
+              "queryRef": "_Measures.KPI4_FirstClassLateRate",
+              "nativeQueryRef": "KPI4_FirstClassLateRate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI3_ZombieSKUCount"
+                "Property": "KPI4_FirstClassLateRate"
               }
             },
             "direction": "Descending"
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ZOMBIE SKUS IDENTIFIED'"
+                  "Value": "'FIRST CLASS LATE RATE'"
                 }
               }
             },
@@ -243,6 +243,31 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The most expensive option is least reliable'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
                 }
               }
             }

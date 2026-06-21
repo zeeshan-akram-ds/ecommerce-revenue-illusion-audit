@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI3_ZombieRevenueShare"
+                  "Property": "KPI4_StandardClassLateRate"
                 }
               },
-              "queryRef": "_Measures.KPI3_ZombieRevenueShare",
-              "nativeQueryRef": "KPI3_ZombieRevenueShare"
+              "queryRef": "_Measures.KPI4_StandardClassLateRate",
+              "nativeQueryRef": "KPI4_StandardClassLateRate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI3_ZombieRevenueShare"
+                "Property": "KPI4_StandardClassLateRate"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D85A30'"
+                      "Value": "'#1D9E75'"
                     }
                   }
                 }
@@ -83,14 +83,14 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "1L"
                 }
               }
             }
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'REVENUE TIED TO ZOMBIES'"
+                  "Value": "'STANDARD CLASS LATE RATE'"
                 }
               }
             },

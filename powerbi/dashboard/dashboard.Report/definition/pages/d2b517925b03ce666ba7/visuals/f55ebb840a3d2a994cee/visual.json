@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "f55ebb840a3d2a994cee",
   "position": {
-    "x": 90,
+    "x": 0,
     "y": 79.456612723214278,
     "z": 1000,
     "height": 28,
-    "width": 160,
+    "width": 290,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "SOLE E25 Elliptical",
+                    "value": "Statistically confirmed: no causal relationship",
                     "textStyle": {
                       "color": "#888780"
                     }

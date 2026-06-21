@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "5a183f35637a393d4309",
   "position": {
-    "x": 75,
+    "x": 5,
     "y": 80.24586121873898,
     "z": 1000,
     "height": 28,
-    "width": 170,
+    "width": 280,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "24% of the full catalog",
+                    "value": "The most expensive option is least reliable",
                     "textStyle": {
                       "color": "#888780"
                     }

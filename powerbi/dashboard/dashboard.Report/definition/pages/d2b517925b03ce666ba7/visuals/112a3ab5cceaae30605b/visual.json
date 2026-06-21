@@ -23,31 +23,16 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI3_HighestRiskScore"
+                  "Property": "KPI4_DiscountMarginLink"
                 }
               },
-              "queryRef": "_Measures.KPI3_HighestRiskScore",
-              "nativeQueryRef": "KPI3_HighestRiskScore"
+              "queryRef": "_Measures.KPI4_DiscountMarginLink",
+              "nativeQueryRef": "KPI4_DiscountMarginLink"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "KPI3_HighestRiskScore"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -74,7 +59,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D85A30'"
+                      "Value": "'#2C2C2A'"
                     }
                   }
                 }
@@ -93,6 +78,13 @@
                   "Value": "0L"
                 }
               }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -104,6 +96,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "wordWrap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -204,7 +209,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'HIGHEST RISK SCORE'"
+                  "Value": "'DISCOUNT-MARGIN LINK'"
                 }
               }
             },

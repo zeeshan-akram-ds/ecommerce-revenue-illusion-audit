@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI3_AvgCompositeRisk_Cut"
+                  "Property": "KPI4_AvgDiscountDependency"
                 }
               },
-              "queryRef": "_Measures.KPI3_AvgCompositeRisk_Cut",
-              "nativeQueryRef": "KPI3_AvgCompositeRisk_Cut"
+              "queryRef": "_Measures.KPI4_AvgDiscountDependency",
+              "nativeQueryRef": "KPI4_AvgDiscountDependency"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI3_AvgCompositeRisk_Cut"
+                "Property": "KPI4_AvgDiscountDependency"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D85A30'"
+                      "Value": "'#2C2C2A'"
                     }
                   }
                 }
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'AVG RISK SCORE (ZOMBIES)'"
+                  "Value": "'AVG DISCOUNT DEPENDENCY'"
                 }
               }
             },

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "eed06e200e3e98658150",
   "position": {
-    "x": 19.314547375836582,
+    "x": 69.314547375836582,
     "y": 78.803099682986954,
     "z": 1000,
     "height": 28,
-    "width": 260,
+    "width": 200,
     "tabOrder": 1000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Compare against catalog median (~51)",
+                    "value": "Across the entire catalog",
                     "textStyle": {
                       "color": "#888780"
                     }
