@@ -104,3 +104,7 @@ Margin decay rate of 4.75% derived from the validated composite risk correlation
 This is a conservative directional estimate. Non-linear compounding effects may produce worse outcomes.
 Chronic operational stagnation confirmed in F-010 makes this scenario a continuation of observed trajectory, not a hypothetical.
 
+**F-021 - Zombie SKUs Are Dispersed, Not Concentrated**
+28 Cut Candidate products span 23 distinct categories, 46% of the catalog's total category taxonomy.
+Unlike profit (concentrated in 8 SKUs), failure has no single category root cause.
+This means the fix requires SKU-level intervention, not a single supplier or category-level sourcing decision.

@@ -187,7 +187,5 @@ table FactOrders
 				in
 				    analytics_fact_orders
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

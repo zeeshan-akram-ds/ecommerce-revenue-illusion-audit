@@ -28,13 +28,14 @@ table QuadrantModel
 
 	column total_revenue
 		dataType: double
+		formatString: 0
 		lineageTag: e6beb86b-3028-4696-945c-5be373df6522
 		summarizeBy: sum
 		sourceColumn: total_revenue
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column total_profit
 		dataType: double
@@ -112,8 +113,6 @@ table QuadrantModel
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_card_id", Int64.Type}, {"product_name", type text}, {"category_name", type text}, {"total_revenue", type number}, {"total_profit", type number}, {"net_profit_pct", type number}, {"late_delivery_risk_rate", type number}, {"discount_dependency_rate", type number}, {"rank_divergence", Int64.Type}, {"quadrant", type text}, {"composite_risk_score", type number}})
 				in
 				    #"Changed Type"
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

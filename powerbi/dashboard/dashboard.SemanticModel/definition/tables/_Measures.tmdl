@@ -192,6 +192,15 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Gauge_ZombieCategoryPct =
+			
+			DIVIDE(
+			    CALCULATE(DISTINCTCOUNT(QuadrantModel[category_name]), QuadrantModel[quadrant] = "Cut Candidates"),
+			    DISTINCTCOUNT(DimProduct[category_name])
+			)
+		formatString: 0%;-0%;0%
+		lineageTag: aff264eb-0714-4a4c-87b6-1ec836f28985
+
 	partition _Measures = m
 		mode: import
 		source =

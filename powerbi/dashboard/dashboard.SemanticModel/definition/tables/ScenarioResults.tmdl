@@ -67,7 +67,5 @@ table ScenarioResults
 				in
 				    #"Changed Type"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

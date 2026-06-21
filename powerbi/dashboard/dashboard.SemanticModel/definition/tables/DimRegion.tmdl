@@ -43,7 +43,5 @@ table DimRegion
 				in
 				    analytics_dim_region
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

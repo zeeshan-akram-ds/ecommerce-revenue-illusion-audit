@@ -28,13 +28,12 @@ table ProductKPIs
 
 	column total_revenue
 		dataType: double
+		formatString: 0.0
 		lineageTag: 656cb593-69dc-47e6-84cf-bed362e049ec
 		summarizeBy: sum
 		sourceColumn: total_revenue
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column total_profit
 		dataType: double
@@ -123,13 +122,12 @@ table ProductKPIs
 
 	column late_delivery_risk_rate
 		dataType: double
+		formatString: 0%;-0%;0%
 		lineageTag: f42dced3-b5e4-4b67-bc80-77acc090a356
 		summarizeBy: sum
 		sourceColumn: late_delivery_risk_rate
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column avg_shipping_delay_days
 		dataType: double
@@ -188,8 +186,6 @@ table ProductKPIs
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_card_id", Int64.Type}, {"product_name", type text}, {"category_name", type text}, {"total_revenue", type number}, {"total_profit", type number}, {"net_profit_pct", type number}, {"revenue_rank", Int64.Type}, {"profit_rank", Int64.Type}, {"rank_divergence", Int64.Type}, {"negative_profit_order_pct", type number}, {"discount_dependency_rate", type number}, {"total_orders", Int64.Type}, {"units_sold_per_day", type number}, {"late_delivery_risk_rate", type number}, {"avg_shipping_delay_days", type number}, {"profit_ratio_volatility", type number}, {"delivery_risk_rank", type text}})
 				in
 				    #"Changed Type"
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 
