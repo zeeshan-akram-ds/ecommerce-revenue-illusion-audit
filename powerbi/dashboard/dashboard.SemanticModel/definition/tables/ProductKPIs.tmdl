@@ -131,13 +131,12 @@ table ProductKPIs
 
 	column avg_shipping_delay_days
 		dataType: double
+		formatString: 0.00
 		lineageTag: d645d350-95b0-40e6-891d-89368a5cd5bb
 		summarizeBy: sum
 		sourceColumn: avg_shipping_delay_days
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column profit_ratio_volatility
 		dataType: double
