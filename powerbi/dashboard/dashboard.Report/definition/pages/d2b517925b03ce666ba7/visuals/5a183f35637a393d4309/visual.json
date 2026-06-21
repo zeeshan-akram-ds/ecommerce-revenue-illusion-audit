@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "35c4d26bce68b0b06b09",
+  "name": "5a183f35637a393d4309",
   "position": {
-    "x": 30,
-    "y": 10,
+    "x": 75,
+    "y": 80.24586121873898,
     "z": 1000,
-    "height": 68,
-    "width": 620,
-    "tabOrder": 0
+    "height": 28,
+    "width": 170,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,20 +19,8 @@
               {
                 "textRuns": [
                   {
-                    "value": "Revenue Reality: The Divergence Trap",
+                    "value": "24% of the full catalog",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "fontSize": "20pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Where revenue ranking misleads the real profit picture",
-                    "textStyle": {
-                      "fontSize": "12pt",
                       "color": "#888780"
                     }
                   }
@@ -59,5 +47,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "9aea26ea7b7390070182"
 }

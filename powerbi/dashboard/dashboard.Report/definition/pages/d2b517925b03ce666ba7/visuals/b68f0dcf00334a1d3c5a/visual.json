@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "35c4d26bce68b0b06b09",
+  "name": "b68f0dcf00334a1d3c5a",
   "position": {
     "x": 30,
     "y": 10,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Revenue Reality: The Divergence Trap",
+                    "value": "Operations",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "20pt"
@@ -30,7 +30,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Where revenue ranking misleads the real profit picture",
+                    "value": "Why products fail: shipping reliability and discount dependency",
                     "textStyle": {
                       "fontSize": "12pt",
                       "color": "#888780"
