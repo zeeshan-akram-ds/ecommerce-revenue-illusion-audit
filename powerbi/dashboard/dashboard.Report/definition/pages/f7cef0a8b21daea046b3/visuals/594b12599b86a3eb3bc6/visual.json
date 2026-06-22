@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "594b12599b86a3eb3bc6",
   "position": {
-    "x": 50.000850240982587,
+    "x": 20,
     "y": 79.456612723214278,
     "z": 1000,
     "height": 28,
-    "width": 240,
+    "width": 260,
     "tabOrder": 1000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Cheapest option, most reliable",
+                    "value": "Lost if a 20% shock hits the top 8 SKUs",
                     "textStyle": {
                       "color": "#888780"
                     }

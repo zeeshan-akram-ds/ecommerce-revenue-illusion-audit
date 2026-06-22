@@ -23,16 +23,31 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI4_DiscountMarginLink"
+                  "Property": "KPI5_CoreReliance"
                 }
               },
-              "queryRef": "_Measures.KPI4_DiscountMarginLink",
-              "nativeQueryRef": "KPI4_DiscountMarginLink"
+              "queryRef": "_Measures.KPI5_CoreReliance",
+              "nativeQueryRef": "KPI5_CoreReliance"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "KPI5_CoreReliance"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -59,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2C2C2A'"
+                      "Value": "'#888780'"
                     }
                   }
                 }
@@ -209,7 +224,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'DISCOUNT-MARGIN LINK'"
+                  "Value": "'CORE RELIANCE'"
                 }
               }
             },

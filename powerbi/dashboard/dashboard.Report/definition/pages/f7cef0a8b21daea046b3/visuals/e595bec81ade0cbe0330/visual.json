@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI4_AvgDiscountDependency"
+                  "Property": "KPI5_CompoundingRisk"
                 }
               },
-              "queryRef": "_Measures.KPI4_AvgDiscountDependency",
-              "nativeQueryRef": "KPI4_AvgDiscountDependency"
+              "queryRef": "_Measures.KPI5_CompoundingRisk",
+              "nativeQueryRef": "KPI5_CompoundingRisk"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI4_AvgDiscountDependency"
+                "Property": "KPI5_CompoundingRisk"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2C2C2A'"
+                      "Value": "'#D85A30'"
                     }
                   }
                 }
@@ -83,7 +83,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1000D"
                 }
               }
             },
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'AVG DISCOUNT DEPENDENCY'"
+                  "Value": "'COMPOUNDING RISK'"
                 }
               }
             },

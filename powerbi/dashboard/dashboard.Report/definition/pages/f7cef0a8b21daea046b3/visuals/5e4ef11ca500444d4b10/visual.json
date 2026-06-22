@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "5e4ef11ca500444d4b10",
   "position": {
-    "x": 0,
+    "x": 35,
     "y": 79.456612723214278,
     "z": 1000,
     "height": 28,
-    "width": 290,
+    "width": 240,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Statistically confirmed: no causal relationship",
+                    "value": "Of total profit sits in just 8 products",
                     "textStyle": {
                       "color": "#888780"
                     }

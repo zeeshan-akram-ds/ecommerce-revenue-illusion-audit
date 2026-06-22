@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI4_StandardClassLateRate"
+                  "Property": "KPI5_CoreExposure"
                 }
               },
-              "queryRef": "_Measures.KPI4_StandardClassLateRate",
-              "nativeQueryRef": "KPI4_StandardClassLateRate"
+              "queryRef": "_Measures.KPI5_CoreExposure",
+              "nativeQueryRef": "KPI5_CoreExposure"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI4_StandardClassLateRate"
+                "Property": "KPI5_CoreExposure"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1D9E75'"
+                      "Value": "'#D85A30'"
                     }
                   }
                 }
@@ -83,14 +83,14 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "1000D"
                 }
               }
             },
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
                 }
               }
             }
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'STANDARD CLASS LATE RATE'"
+                  "Value": "'CORE 8 EXPOSURE'"
                 }
               }
             },

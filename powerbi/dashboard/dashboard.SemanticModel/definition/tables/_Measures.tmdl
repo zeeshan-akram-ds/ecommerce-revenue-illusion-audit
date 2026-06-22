@@ -230,6 +230,42 @@ table _Measures
 	measure KPI4_DiscountMarginLink = "None"
 		lineageTag: ae0d2c8c-ea83-43b7-b11a-158ae1db5f0d
 
+	measure KPI5_SafeToCut =
+			
+			CALCULATE(
+			    ABS(SELECTEDVALUE(ScenarioResults[Profit Impact ($)])),
+			    ScenarioResults[Scenario] = "Scenario A: Zombie SKU Elimination"
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 065ed2ab-3996-4215-b1fe-3aca7b4d11ff
+
+	measure KPI5_CoreExposure =
+			
+			CALCULATE(
+			    ABS(SELECTEDVALUE(ScenarioResults[Profit Impact ($)])),
+			    ScenarioResults[Scenario] = "Scenario B: Core SKU Disruption"
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 23eabc80-8755-427c-a5b7-ebf3326623aa
+
+	measure KPI5_CompoundingRisk =
+			
+			CALCULATE(
+			    ABS(SELECTEDVALUE(ScenarioResults[Profit Impact ($)])),
+			    ScenarioResults[Scenario] = "Scenario C: Compounded Stress"
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: e833ab86-395d-40bd-9288-71235581c371
+
+	measure KPI5_CoreReliance =
+			
+			DIVIDE(
+			    SUM(CoreProfitDrivers[total_profit]),
+			    SUM(ProductKPIs[total_profit])
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 029a592f-ebf7-44ed-a148-af177b9aa31f
+
 	partition _Measures = m
 		mode: import
 		source =

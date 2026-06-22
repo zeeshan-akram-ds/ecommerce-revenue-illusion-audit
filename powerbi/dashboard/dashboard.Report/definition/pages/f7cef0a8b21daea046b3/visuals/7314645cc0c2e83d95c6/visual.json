@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "7314645cc0c2e83d95c6",
   "position": {
-    "x": 5,
+    "x": 13,
     "y": 80.24586121873898,
     "z": 1000,
     "height": 28,
-    "width": 280,
+    "width": 270,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The most expensive option is least reliable",
+                    "value": "28 SKUs removed, 98.2% profit retained",
                     "textStyle": {
                       "color": "#888780"
                     }

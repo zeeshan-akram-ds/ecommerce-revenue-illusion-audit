@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "d903fb1c5e5a19910757",
   "position": {
-    "x": 69.314547375836582,
+    "x": 2.3145473758365824,
     "y": 78.803099682986954,
     "z": 1000,
     "height": 28,
-    "width": 200,
+    "width": 290,
     "tabOrder": 1000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Across the entire catalog",
+                    "value": "Cost of letting operations keep deteriorating",
                     "textStyle": {
                       "color": "#888780"
                     }

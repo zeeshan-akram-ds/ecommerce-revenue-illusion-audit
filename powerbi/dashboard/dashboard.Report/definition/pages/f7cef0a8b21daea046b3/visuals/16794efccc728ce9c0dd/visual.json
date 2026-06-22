@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "KPI4_FirstClassLateRate"
+                  "Property": "KPI5_SafeToCut"
                 }
               },
-              "queryRef": "_Measures.KPI4_FirstClassLateRate",
-              "nativeQueryRef": "KPI4_FirstClassLateRate"
+              "queryRef": "_Measures.KPI5_SafeToCut",
+              "nativeQueryRef": "KPI5_SafeToCut"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "KPI4_FirstClassLateRate"
+                "Property": "KPI5_SafeToCut"
               }
             },
             "direction": "Descending"
@@ -74,7 +74,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#D85A30'"
+                      "Value": "'#1D9E75'"
                     }
                   }
                 }
@@ -83,7 +83,7 @@
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "1000D"
                 }
               }
             },
@@ -204,7 +204,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'FIRST CLASS LATE RATE'"
+                  "Value": "'SAFE TO CUT'"
                 }
               }
             },
