@@ -468,14 +468,25 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'sdfgdhcb'"
+                  "Value": "'High sales volume masking severe margin erosion.'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
                 }
               }
             }

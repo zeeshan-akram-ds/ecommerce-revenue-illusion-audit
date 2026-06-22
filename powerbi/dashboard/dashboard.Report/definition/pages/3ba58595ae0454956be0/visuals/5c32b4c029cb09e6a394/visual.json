@@ -496,6 +496,37 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Highest composite threat from delivery failure and margin loss.'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

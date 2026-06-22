@@ -28,12 +28,14 @@ table ProductKPIs
 
 	column total_revenue
 		dataType: double
-		formatString: 0.0
+		formatString: 0
 		lineageTag: 656cb593-69dc-47e6-84cf-bed362e049ec
 		summarizeBy: sum
 		sourceColumn: total_revenue
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column total_profit
 		dataType: double
