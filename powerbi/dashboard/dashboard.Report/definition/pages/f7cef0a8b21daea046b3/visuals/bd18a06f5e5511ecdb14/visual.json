@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "adc9abb9e126ac3e0434",
+  "name": "bd18a06f5e5511ecdb14",
   "position": {
-    "x": 20,
-    "y": 90,
-    "z": 16000,
-    "height": 103,
-    "width": 280,
-    "tabOrder": 14000
+    "x": 30,
+    "y": 10,
+    "z": 1000,
+    "height": 68,
+    "width": 620,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Statistically Confirmed",
+                    "value": "Scenarios",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)"
+                      "fontFamily": "Segoe (Bold)",
+                      "fontSize": "20pt"
                     }
                   }
                 ]
@@ -29,9 +30,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "There is no causal relationship between discount frequency and margin erosion. Discounting is a baseline marketplace reality, not the driver of localized SKU failures.",
+                    "value": "What happens to profit under three financial stress tests",
                     "textStyle": {
-                      "fontSize": "9pt",
+                      "fontSize": "12pt",
                       "color": "#888780"
                     }
                   }
@@ -42,7 +43,21 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "parentGroupName": "92373cbd5a0b5a36006b"
+  }
 }
