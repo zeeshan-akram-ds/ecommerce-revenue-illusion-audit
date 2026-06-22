@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "e697b5b7bd26c9e0c6b7",
+  "name": "706f3764acc0e2823bc5",
   "position": {
-    "x": 640,
-    "y": 220,
-    "z": 11000,
-    "height": 280,
-    "width": 610,
-    "tabOrder": 9000
+    "x": 30,
+    "y": 510,
+    "z": 12000,
+    "height": 200,
+    "width": 590,
+    "tabOrder": 10000
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,50 +20,58 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimRegion"
+                      "Entity": "ProductKPIs"
                     }
                   },
-                  "Property": "order_country"
+                  "Property": "Discount_Distribution_Bucket"
                 }
               },
-              "queryRef": "DimRegion.order_country",
-              "nativeQueryRef": "order_country",
+              "queryRef": "ProductKPIs.Discount_Distribution_Bucket",
+              "nativeQueryRef": "Discount_Distribution_Bucket",
               "active": true
             }
           ]
         },
-        "Tooltips": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ProductKPIs"
+                        }
+                      },
+                      "Property": "Product Name Short"
                     }
                   },
-                  "Property": "Late Delivery Rate"
+                  "Function": 5
                 }
               },
-              "queryRef": "_Measures.Late Delivery Rate",
-              "nativeQueryRef": "Late Delivery Rate"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Total Orders"
-                }
-              },
-              "queryRef": "_Measures.Total Orders",
-              "nativeQueryRef": "Total Orders"
+              "queryRef": "CountNonNull(ProductKPIs.Product Name Short)",
+              "nativeQueryRef": "Count of Product Name Short"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ProductKPIs"
+                  }
+                },
+                "Property": "Discount_Distribution_Bucket"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -74,86 +82,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "_Measures"
-                            }
-                          },
-                          "Property": "Late Delivery Rate"
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#F5F4F0'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#D85A30'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  }
-                },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
+                    "Literal": {
+                      "Value": "'#1D9E75'"
                     }
                   }
                 }
@@ -162,30 +92,82 @@
           }
         }
       ],
-      "mapStyles": [
+      "categoryAxis": [
         {
           "properties": {
-            "mapTheme": {
+            "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "'canvasLight'"
+                  "Value": "20L"
                 }
               }
-            }
-          }
-        }
-      ],
-      "mapControls": [
-        {
-          "properties": {
-            "showZoomButtons": {
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showLassoButton": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -266,14 +248,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Where Delivery Fails Geographically'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+                  "Value": "'The 94% Floor'"
                 }
               }
             },
@@ -281,6 +256,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             },
@@ -311,7 +293,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Darker regions carry higher operational risk.'"
+                  "Value": "'Almost every product requires a discount to sell. This is structural, not promotional.'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9.5D"
                 }
               }
             },

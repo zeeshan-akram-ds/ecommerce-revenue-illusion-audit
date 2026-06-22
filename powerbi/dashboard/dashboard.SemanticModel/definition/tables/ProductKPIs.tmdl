@@ -176,6 +176,19 @@ table ProductKPIs
 
 		annotation SummarizationSetBy = Automatic
 
+	column Discount_Distribution_Bucket =
+			
+			SWITCH(
+			    TRUE(),
+			    ProductKPIs[discount_dependency_rate] < 90, "80% - 90%",
+			    ProductKPIs[discount_dependency_rate] < 95, "90% - 95%",
+			    "95% - 100%"
+			)
+		lineageTag: 311e82c0-ceb8-44f4-adea-7b32751880e8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ProductKPIs = m
 		mode: import
 		source =
