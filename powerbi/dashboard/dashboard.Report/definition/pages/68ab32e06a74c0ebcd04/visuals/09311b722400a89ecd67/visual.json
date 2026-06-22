@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "09311b722400a89ecd67",
+  "position": {
+    "x": 649.71854954837022,
+    "y": 710.04058122790934,
+    "z": 17001,
+    "height": 28.90430684644587,
+    "width": 601.96360780206828,
+    "tabOrder": 15001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Source: DataCo Supply Chain Dataset · 180,519 transactions · SQL & Python validated · Updated June 2026",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#888780"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

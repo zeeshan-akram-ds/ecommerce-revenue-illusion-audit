@@ -1382,7 +1382,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Delivery Risk": {
+			          "Late Delivery (%)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1392,7 +1392,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Late Delivery (%)": {
+			          "Delivery Risk": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
