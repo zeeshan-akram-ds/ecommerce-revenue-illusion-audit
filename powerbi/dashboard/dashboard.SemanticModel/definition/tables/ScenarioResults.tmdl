@@ -39,13 +39,12 @@ table ScenarioResults
 
 	column 'Profit Impact ($)'
 		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 799f1c2f-4414-48df-8ff4-c01d7dcf4c4c
 		summarizeBy: sum
 		sourceColumn: Profit Impact ($)
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Profit Retained (%)'
 		dataType: double
@@ -56,6 +55,21 @@ table ScenarioResults
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sort_Index =
+			
+			SWITCH(
+			    ScenarioResults[Scenario],
+			    "Baseline (Current State)", 1,
+			    "Scenario A: Zombie SKU Elimination", 2,
+			    "Scenario B: Core SKU Disruption", 3,
+			    "Scenario C: Compounded Stress", 4
+			)
+		formatString: 0
+		lineageTag: 718e5ebd-d516-4888-b01f-cd914071355a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
 
 	partition ScenarioResults = m
 		mode: import

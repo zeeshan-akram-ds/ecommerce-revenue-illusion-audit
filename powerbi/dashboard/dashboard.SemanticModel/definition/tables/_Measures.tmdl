@@ -8,7 +8,7 @@ table _Measures
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'Total Profit' = SUM(FactOrders[order_profit_per_order])
-		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 02371093-1ac0-4688-bcf6-defe51831cdc
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
@@ -265,6 +265,17 @@ table _Measures
 			)
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 029a592f-ebf7-44ed-a148-af177b9aa31f
+
+	measure Scenario_Dual_Label =
+			
+			VAR _Profit = SUM('ScenarioResults'[Projected Profit])
+			VAR _Impact = SUM('ScenarioResults'[Profit Impact ($)])
+			
+			VAR _ProfitText = FORMAT(_Profit / 1000000, "$0.00M")
+			VAR _ImpactText = IF(_Impact = 0, "", " (" & FORMAT(_Impact / 1000, "$0K") & ")")
+			
+			RETURN _ProfitText & _ImpactText
+		lineageTag: 9b7c6d2c-496b-4aed-812d-af7be748b1fb
 
 	partition _Measures = m
 		mode: import
