@@ -7,7 +7,7 @@
     "z": 10000,
     "height": 280,
     "width": 720,
-    "tabOrder": 8000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
