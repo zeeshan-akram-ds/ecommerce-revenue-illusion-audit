@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "b68f0dcf00334a1d3c5a",
+  "name": "adc9abb9e126ac3e0434",
   "position": {
-    "x": 30,
-    "y": 10,
-    "z": 1000,
-    "height": 68,
-    "width": 620,
-    "tabOrder": 0
+    "x": 660,
+    "y": 600,
+    "z": 16000,
+    "height": 103,
+    "width": 280,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Operations",
+                    "value": "Statistically Confirmed",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "fontSize": "20pt"
+                      "fontFamily": "Segoe (Bold)"
                     }
                   }
                 ]
@@ -30,30 +29,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "Why products fail: shipping reliability and discount dependency",
+                    "value": "There is no causal relationship between discount frequency and margin erosion. Discounting is a baseline marketplace reality, not the driver of localized SKU failures.",
                     "textStyle": {
-                      "fontSize": "12pt",
+                      "fontSize": "9pt",
                       "color": "#888780"
                     }
                   }
                 ]
               }
             ]
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
           }
         }
       ]

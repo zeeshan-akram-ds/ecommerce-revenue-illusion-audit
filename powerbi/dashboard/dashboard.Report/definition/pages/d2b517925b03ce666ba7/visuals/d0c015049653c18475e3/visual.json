@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "706f3764acc0e2823bc5",
+  "name": "d0c015049653c18475e3",
   "position": {
-    "x": 30,
+    "x": 945,
     "y": 510,
-    "z": 13000,
+    "z": 17000,
     "height": 200,
-    "width": 590,
-    "tabOrder": 10000
+    "width": 305,
+    "tabOrder": 15000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,35 @@
                       "Entity": "ProductKPIs"
                     }
                   },
-                  "Property": "Discount_Distribution_Bucket"
+                  "Property": "Product Name Short"
                 }
               },
-              "queryRef": "ProductKPIs.Discount_Distribution_Bucket",
-              "nativeQueryRef": "Discount_Distribution_Bucket",
+              "queryRef": "ProductKPIs.Product Name Short",
+              "nativeQueryRef": "Product Name Short",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ProductKPIs"
+                        }
+                      },
+                      "Property": "discount_dependency_rate"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ProductKPIs.discount_dependency_rate)",
+              "nativeQueryRef": "Sum of discount_dependency_rate",
               "active": true
             }
           ]
@@ -44,34 +68,17 @@
                           "Entity": "ProductKPIs"
                         }
                       },
-                      "Property": "Product Name Short"
+                      "Property": "net_profit_pct"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               },
-              "queryRef": "CountNonNull(ProductKPIs.Product Name Short)",
-              "nativeQueryRef": "Count of Product Name Short"
+              "queryRef": "Sum(ProductKPIs.net_profit_pct)",
+              "nativeQueryRef": "Sum of net_profit_pct"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "ProductKPIs"
-                  }
-                },
-                "Property": "Discount_Distribution_Bucket"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -83,9 +90,29 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1D9E75'"
+                      "Value": "'#888780'"
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -95,33 +122,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "innerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "20L"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "gridlineShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
             "show": {
               "expr": {
                 "Literal": {
@@ -129,14 +129,14 @@
                 }
               }
             },
-            "fontSize": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "true"
                 }
               }
             },
-            "color": {
+            "titleColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -147,10 +147,42 @@
                 }
               }
             },
-            "labelPosition": {
+            "titleFontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'OutsideEnd'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Discount Rate'"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
                 }
               }
             }
@@ -160,151 +192,21 @@
       "valueAxis": [
         {
           "properties": {
-            "show": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Net Margin'"
                 }
               }
             },
-            "showAxisTitle": {
+            "titleFontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E5E3DC'"
-                    }
-                  }
-                }
-              }
-            },
-            "preset": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Bottom'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'The 94% Floor'"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#2C2C2A'"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Almost every product requires a discount to sell. This is structural, not promotional.'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9.5D"
-                }
-              }
-            },
-            "fontColor": {
+            "titleColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -312,6 +214,103 @@
                       "Value": "'#888780'"
                     }
                   }
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Y-Axis Constant Line 1'"
+                }
+              }
+            },
+            "value": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ProductKPIs"
+                        }
+                      },
+                      "Property": "net_profit_pct"
+                    }
+                  },
+                  "Function": 6
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#888780'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

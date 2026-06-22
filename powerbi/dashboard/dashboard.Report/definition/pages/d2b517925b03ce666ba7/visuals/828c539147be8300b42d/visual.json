@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "b68f0dcf00334a1d3c5a",
+  "name": "828c539147be8300b42d",
   "position": {
-    "x": 30,
-    "y": 10,
-    "z": 1000,
-    "height": 68,
-    "width": 620,
-    "tabOrder": 0
+    "x": 660,
+    "y": 576,
+    "z": 18000,
+    "height": 33,
+    "width": 144,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,20 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Operations",
+                    "value": "Statistical r-value: -0.03",
                     "textStyle": {
-                      "fontFamily": "Segoe (Bold)",
-                      "fontSize": "20pt"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Why products fail: shipping reliability and discount dependency",
-                    "textStyle": {
-                      "fontSize": "12pt",
+                      "fontSize": "9pt",
                       "color": "#888780"
                     }
                   }
