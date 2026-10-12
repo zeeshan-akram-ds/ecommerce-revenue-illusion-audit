@@ -1,5 +1,5 @@
 # The Profit Leak Diagnostic
-### How 28 Products Are Bleeding $643K Out of a $35M Catalog
+### What a $35M Catalog's Revenue Report Doesn't Show You
 
 **An audit-grade profitability and operational risk framework for D2C brands and Shopify operators whose revenue is growing while margins quietly shrink.**
 
@@ -7,13 +7,15 @@
 [![Dashboard Walkthrough](https://img.shields.io/badge/Dashboard-Video%20Walkthrough-blue)](https://youtu.be/BtNOyrPLW7o) 
 [![Book a Diagnostic Call](https://img.shields.io/badge/Book%20a%20Call-Calendly-green)](https://calendly.com/zeeshanakram/data-diagnostic)
 
+> **Current version: v1.1 (October 2026).** The original report and README are preserved at the `v1.0` tag. See [REVISIONS.md](REVISIONS.md) for what changed and why.
+
 ---
 
 ## The Verdict
 
 This catalog generates $35.2M in revenue across 180,519 transactions. On paper, that looks like a healthy business.
 
-It isn't. Every single one of its 118 products has recorded at least one loss-making order. Just 8 products generate 84.5% of all profit. 28 products sit in the catalog doing nothing but consuming warehouse space and customer service hours. For nearly three years, revenue and profit moved sideways, then collapsed off a cliff in the same month, which is what happens when a fragile supply chain finally runs out of room to absorb its own problems.
+It isn't. Every single one of its 118 products has recorded at least one loss-making order. Just 8 products generate 84.5% of all profit. 28 products combine weak margins with high delivery failure and earn 2.2% of revenue. The first thing a revenue report hides is how concentrated and how fragile the profit actually is.
 
 Revenue is not the issue. Mistaking revenue for business health is.
 
@@ -42,22 +44,22 @@ This repository is the full technical build behind that finding: the SQL warehou
 ![Revenue Trap](assets/report_figures/revenue_trap_section.png)
 
 ### The Discounting Illusion
-93–97% of orders across nearly the entire catalog require a discount to convert. That's not a seasonal push, it's the default operating model. Statistical testing confirms zero correlation between discount depth and margin erosion (p = 0.73), so there's no pricing lever waiting to be pulled. Even the top 4 revenue products need a discount on 94.4% of their orders, and 18.5% of those orders still lose money outright.
+93–97% of orders across nearly the entire catalog require a discount to convert. That's not a seasonal push, it's the default operating model. Statistical testing found no significant relationship between discount depth and margin (p = 0.73), so discount depth does not explain which products earn less. Even the top 4 revenue products need a discount on 94.4% of their orders, and 18.5% of their orders lose money outright.
 
 ![Discounting Illusion](assets/report_figures/discount_dependency.png)
 
 ### The Cost of Premium Shipping
-First Class shipping arrives late **100% of the time**, averaging a full day behind schedule. Standard Class, the cheapest tier is the most reliable method in the catalog. Customers paying the most for speed are getting the worst experience the business offers.
+First Class shipping arrives late **100% of the time**, averaging a full day behind schedule. Standard Class, the cheapest tier, is the most reliable method in the catalog. Customers paying the most for speed are getting the worst experience the business offers. A rate of exactly 100% with a uniform one-day gap suggests the promised delivery window may be mis-set, not only the process (a hypothesis to confirm from the delay distribution).
 
 ![Shipping Reality](assets/report_figures/shipping_reality.png)
 
-### 28 Zombie SKUs
-28 products combine weak margins with high delivery failure while generating just 2.2% of total revenue, spread across 23 different categories not one bad supplier, but scattered drag across nearly half the catalog's taxonomy. Cutting all 28 retains 97.8% of revenue and 98.2% of profit, for a cost of roughly $67K and a quarter of operational bandwidth freed immediately.
+### 28 Low-Performing SKUs (Cut Candidates)
+28 products combine weak margins with high delivery failure while generating just 2.2% of total revenue, spread across 23 different categories: not one bad supplier, but scattered drag across nearly half the catalog's taxonomy. In aggregate they still contribute roughly $67K (1.8%) of profit. The data shows they are weak, not why. The report recommends sorting them by cause (new or seasonal, cost or discount, delivery, or genuinely dead) before cutting any. Savings in handling, storage and support are not measured in this dataset.
 
-![Zombie SKUs](assets/report_figures/zombie_skus_visual.png)
+![Low-performing SKU triage](assets/report_figures/zombie_triage.png)
 
 ### The 8 Products Running the Business
-8 products out of 118 generate 84.5% of all profit, a single point of failure wearing a 118-product disguise. A 20% margin shock to just those 8 (a plausible supplier or logistics disruption) wipes out **$643,000**, nearly 17% of total company profit, in one move. The other 110 products cannot absorb that loss between them.
+8 products out of 118 generate 84.5% of all profit, a single point of failure wearing a 118-product disguise. A 20% margin shock to just those 8 (a plausible supplier or logistics disruption, modeled) wipes out **$643,000**, nearly 17% of total company profit, in one move. That is more than the other 110 products earn combined.
 
 ![Profit Concentration](assets/report_figures/profit_revenue_concentration.png)
 
@@ -66,7 +68,7 @@ Three scenarios were modeled against this catalog to quantify the cost of inacti
 
 | Scenario | Action | Financial Impact |
 |---|---|---|
-| **A: Zombie SKU Elimination** | Cut all 28 Cut Candidates | –$67K profit, frees ~25% of operational bandwidth |
+| **A: Zombie SKU Elimination** | Cut all 28 Cut Candidates | –$67K profit (operational savings not measured) |
 | **B: Core SKU Disruption** | 20% margin shock to the top 8 SKUs | –$643K profit (16.9% of total) |
 | **C: Compounded Operational Stress** | +10% discount dependency, +15% delivery risk | –$181K profit (directional estimate) |
 
@@ -133,8 +135,7 @@ Full reasoning for every modeling choice like quadrant axis selection, risk scor
 │   └── theme.json                # Custom "Revenue Rank Reality" color theme & typography
 │
 ├── reports/
-│   ├── profit_leak_diagnostic.md            # Client-facing diagnostic (source)
-│   └── The_Profit_Leak_Diagnostic.pdf        # Client-facing diagnostic (final, 9 pages)
+│   └── The_Profit_Leak_Diagnostic.pdf        # Client-facing diagnostic (v1.1, 9 pages)
 │
 ├── sql/
 │   ├── 01_raw_import/            # DDL for raw data
@@ -147,6 +148,7 @@ Full reasoning for every modeling choice like quadrant axis selection, risk scor
 │
 ├── src/                          # Environment configs and Python scripts
 │
+├── REVISIONS.md                  # What changed between v1.0 and v1.1, and why
 ├── requirements.txt
 ├── .gitignore
 ├── LICENSE
@@ -159,14 +161,14 @@ Full reasoning for every modeling choice like quadrant axis selection, risk scor
 
 I run this exact diagnostic for e-commerce operators who need to know which SKUs are actually driving growth and which ones are quietly bleeding cash. If decisions in your business are being made off a revenue leaderboard, there's a real chance you're protecting the wrong products and cutting the wrong costs.
 
-The deliverable isn't a generic dashboard, it's specific, statistically defensible interventions: which SKUs to cut, which to protect, and what each path costs you in dollars if you do nothing.
+The deliverable isn't a generic dashboard, it's specific, statistically defensible interventions: which SKUs to protect, which to investigate before cutting, and what each path costs you in dollars if you do nothing.
 
 ### Get in Touch
 
 - **Email:** [zeeshanakramds@gmail.com](mailto:zeeshanakramds@gmail.com)
 - **LinkedIn:** [linkedin.com/in/zeeshan-akram-ds](https://www.linkedin.com/in/zeeshan-akram-ds/)
 - **Portfolio / Case Studies:** [Personal Website](https://zeeshan-portfolio-swart.vercel.app/)
-- **Book a 15–20 min Diagnostic Call:** [calendly.com/zeeshanakram/data-diagnostic](https://calendly.com/zeeshanakram/data-diagnostic)
+- **Book a free 30-minute profit call:** [calendly.com/zeeshanakram/data-diagnostic](https://calendly.com/zeeshanakram/data-diagnostic)
 
 ---
 
