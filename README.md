@@ -4,13 +4,15 @@
 
 **An audit-grade profitability and operational risk framework for D2C brands and Shopify operators whose revenue is growing while margins quietly shrink.**
 
-[!\[View Full Report (PDF)](https://img.shields.io/badge/Full%20Report-PDF-red)](reports/The_Profit_Leak_Diagnostic.pdf)
-[!\[Dashboard Walkthrough](https://img.shields.io/badge/Dashboard-Video%20Walkthrough-blue)](https://youtu.be/BtNOyrPLW7o)
-[!\[Book a Diagnostic Call](https://img.shields.io/badge/Book%20a%20Call-Calendly-green)](https://calendly.com/zeeshanakram/data-diagnostic)
+[![View Full Report (PDF)](https://img.shields.io/badge/Full%20Report-PDF-red)](reports/The_Profit_Leak_Diagnostic.pdf)
 
-> \*\*Current version: v1.1 (October 2026).\*\* The original report and README are preserved at the `v1.0` tag. See \[REVISIONS.md](REVISIONS.md) for what changed and why.
+[![Dashboard Walkthrough](https://img.shields.io/badge/Dashboard-Video%20Walkthrough-blue)](https://youtu.be/BtNOyrPLW7o)
 
-\---
+[![Book a Diagnostic Call](https://img.shields.io/badge/Book%20a%20Call-Calendly-green)](https://calendly.com/zeeshanakram/data-diagnostic)
+
+> **Current version: v1.1 (October 2026).** The original report and README are preserved at the `v1.0` tag. See [REVISIONS.md](REVISIONS.md) for what changed and why.
+
+---
 
 ## The Verdict
 
